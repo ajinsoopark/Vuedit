@@ -40,3 +40,4 @@ The end product will have at least the following:
 * User roles
 * Reporting 
 * Saving feature for posts, and comments.
+* Day Mode 

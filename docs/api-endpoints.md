@@ -32,7 +32,7 @@
 
 * `GET /api/posts`
     * Posts index/search
-* `GET /api/posts/:subredditId`
+* `GET /api/posts/:subvueditId`
     * Posts from certain subreddit
 * `GET /api/posts/:userId`
     * Posts from certain user
@@ -71,14 +71,18 @@
 * `Patch /api/votes/post/:postId`
     * Adds or Subtracts vote count for a post
 
-## Subreddits
+## Subvuedits
 
-* `GET /api/subreddits`
-    * Subreddits index/search
-* `GET /api/subreddits/:userId`
-    * Subreddits from specific user
-* `GET /api/subreddits/:id/posts`
-    * Posts from specific subreddit
-* `POST /api/subreddits`
-    * Creates a new subreddit
+* `GET /api/subvuedits`
+    * Subvuedits index/search
+* `GET /api/subvuedits/:userId`
+    * Subvuedits from specific user
+* `GET /api/subvuedits/:id/posts`
+    * Posts from specific subvuedit
+* `POST /api/subvuedits`
+    * Creates a new subvuedit
 
+## Avatars 
+
+* `GET /api/avatars/:userId`
+    * Get avatar for specific user
