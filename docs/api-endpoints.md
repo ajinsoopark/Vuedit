@@ -28,7 +28,18 @@
 * `DELETE /api/session` 
     * logs out user
 
-## Posts 
+## Subvuedits
+
+* `GET /api/subvuedits`
+    * Subvuedits index/search
+* `GET /api/subvuedits/:userId`
+    * Subvuedits from specific user
+* `GET /api/subvuedits/:id/posts`
+    * Posts from specific subvuedit
+* `POST /api/subvuedits`
+    * Creates a new subvuedit
+
+<!-- ## Posts 
 
 * `GET /api/posts`
     * Posts index/search
@@ -56,7 +67,34 @@
 * `PATCH /api/comments/:commentId`
     * Allows user to update their comment
 * `DELETE /api/comments/:commentId`
+    * Deletes comment -->
+
+## Content
+
+* `GET /api/content/posts`
+    * Posts index/search
+* `GET /api/content/posts/:subvueditId`
+    * Posts from certain subvuedit
+* `GET /api/content/posts/:userId`
+    * Posts from certain user
+* `GET /api/content/comments`
+    * Comments index/search
+* `GET /api/content/comments/:userId`
+    * Comments from a user
+* `GET /api/content/comments/:postId`
+    * Comments from a post
+* `POST /api/content/comments`
+    * Creates new comment
+* `POST /api/content/posts`
+    * Creates new post
+* `PATCH /api/content/comments/:commentId`
+    * Allows user to update their comment
+* `PATCH /api/content/posts/:postId`
+    * Allows user to update their post
+* `DELETE /api/content/comments/:commentId`
     * Deletes comment
+* `DELETE /api/content/posts/:postId`
+    * Deletes post
 
 ## Voting
 
@@ -70,17 +108,6 @@
     * Adds or Subtracts vote count for a comment
 * `Patch /api/votes/post/:postId`
     * Adds or Subtracts vote count for a post
-
-## Subvuedits
-
-* `GET /api/subvuedits`
-    * Subvuedits index/search
-* `GET /api/subvuedits/:userId`
-    * Subvuedits from specific user
-* `GET /api/subvuedits/:id/posts`
-    * Posts from specific subvuedit
-* `POST /api/subvuedits`
-    * Creates a new subvuedit
 
 ## Avatars 
 
