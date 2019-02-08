@@ -14,6 +14,11 @@ The end product will have at least the following:
 * Hosting on Heroku
 
 # Design Docs
+- [View Wireframes](/docs/wireframes)
+- [React Components](component-hierarchy.md)
+- [API endpoints](api-endpoints.md)
+- [DB schema](schema.md)
+- [Sample State](sample-state.md)
 
 # Implementation Timeline
 
