@@ -8,8 +8,10 @@ The end product will have at least the following:
 * **Users** - Creating/deleting/editing accounts, Logging in, Demo login
 * **Posts** - Creating/deleting/editing, Comments on posts
 * **Comments** - Creating/deleting/editing, Replying to comment
+* **Subscriptions** - Will have a tie between users and Subvuedits
 * **Voting** - Voting system on comments and posts
-* **Subreddit** - Subscriptions, Posts, Rules
+* **Subvuedit** - Subscriners, Posts, Rules
+* **Avatars** - Tied to users as their profile picture
 * Profiles to be viewed of users and their available information.
 * Hosting on Heroku
 
