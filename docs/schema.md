@@ -18,7 +18,7 @@ name          | string    | not null, unique
 user_id       | integer   | not null
 user_subbed   | string    | 
 
-*String of userIds taht will be used to figure out if the current user is subbed.*
+*String of userIds that will be used to figure out if the current user is subbed.*
 
 ## Content
 column name   | data type | details
