@@ -32,19 +32,24 @@
 
 * `GET /api/subvuedits`
     * Subvuedits index/search
-* `GET /api/subvuedits/:userId`
-    * Subvuedits from specific user
-* `GET /api/subvuedits/:id/posts`
-    * Posts from specific subvuedit
+* `GET /api/subvuedits/:id`
+    * Fetches information about subvuedit(description)
 * `POST /api/subvuedits`
     * Creates a new subvuedit
+
+## Subscriptions
+
+* `GET /api/subscriptions/:subvueditId`
+    * Fetch subscriptions for specific Subvuedit
+* `GET /api/subscriptions/:userId`
+    * Fetch subscriptions for specific user
 
 ## Posts 
 
 * `GET /api/posts`
     * Posts index/search
 * `GET /api/posts/:subvueditId`
-    * Posts from certain subreddit
+    * Posts from certain subvuedit
 * `GET /api/posts/:userId`
     * Posts from certain user
 * `POST /api/posts`
@@ -69,44 +74,21 @@
 * `DELETE /api/comments/:commentId`
     * Deletes comment
 
-<!-- ## Content
-
-* `GET /api/content/posts`
-    * Posts index/search
-* `GET /api/content/posts/:subvueditId`
-    * Posts from certain subvuedit
-* `GET /api/content/posts/:userId`
-    * Posts from certain user
-* `GET /api/content/comments`
-    * Comments index/search
-* `GET /api/content/comments/:userId`
-    * Comments from a user
-* `GET /api/content/comments/:postId`
-    * Comments from a post
-* `POST /api/content/comments`
-    * Creates new comment
-* `POST /api/content/posts`
-    * Creates new post
-* `PATCH /api/content/comments/:commentId`
-    * Allows user to update their comment
-* `PATCH /api/content/posts/:postId`
-    * Allows user to update their post
-* `DELETE /api/content/comments/:commentId`
-    * Deletes comment
-* `DELETE /api/content/posts/:postId`
-    * Deletes post -->
-
 ## Voting
 
 * `GET /api/votes/comments/:commentId`
     * Votes for certain comment
 * `GET /api/votes/posts/:postId`
     * Votes for certain post
-* `POST /api/votes/comment`
-    * Creates upvote/downvote for comment
+* `GET /api/votes/subvuedit/:subvueditId`
+    * Votes for certain subvuedit
+* `POST /api/votes/`
+    * Creates upvote/downvote for comment/post/subvuedit
+* `PATCH /api/votes/subvuedit/:subvueditId`
+    * Adds or Subtracts vote count for a subvuedit
 * `PATCH /api/votes/comment/:commentId`
     * Adds or Subtracts vote count for a comment
-* `Patch /api/votes/post/:postId`
+* `PATCH /api/votes/post/:postId`
     * Adds or Subtracts vote count for a post
 
 ## Avatars 

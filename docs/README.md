@@ -5,7 +5,7 @@
 Vuedit is a minimalist-themed clone of Reddit, built using React/Redux, and Express.
 The end product will have at least the following:
 
-* **Users** - Creating/deleting/editing accounts, Logging in, Demo login, Karma
+* **Users** - Creating/deleting/editing accounts, Logging in, Demo login
 * **Posts** - Creating/deleting/editing, Comments on posts
 * **Comments** - Creating/deleting/editing, Replying to comment
 * **Voting** - Voting system on comments and posts
@@ -46,3 +46,4 @@ The end product will have at least the following:
 * Reporting 
 * Saving feature for posts, and comments.
 * Day Mode 
+* Karma

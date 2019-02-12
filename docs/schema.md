@@ -15,22 +15,16 @@ column name   | data type | details
 --------------|-----------|-----------
 id            | integer   | primary key, not null
 name          | string    | not null, unique
-user_id       | integer   | not null
-user_subbed   | string    | 
+descriptions  | string    | not null
 
 *String of userIds that will be used to figure out if the current user is subbed.*
 
-<!-- ## Content
-column name   | data type | details
---------------|-----------|-----------
-id            | integer   | primary key, not null
-user_id       | integer   | not null, foreign key (references users), indexed
-content_type  | string    | not null
-body          | string    | not null
-title         | string    | 
-subvuedit_id  | integer   | not null, foreign key (references subvuedits), indexed
-
-*Contents can either be comments, or posts.* -->
+## Subscriptions
+column name  | data type | details
+-------------|-----------|-------------
+id           | integer   | primary key, not null
+sub_id       | integer   | not null, foreign key (references subvuedits), indexed
+user_id      | integer   | not null, foreign key (references users), indexed
 
 ## Posts
 column name   | data type | details
@@ -45,7 +39,7 @@ subvudedit_id | integer   | not null, foreign key (references subvuedits), index
 column name   | data type | details 
 --------------|-----------|------------
 id            | integer   | primary key, not null
-user_id       | integer   | not null, foreign key (references, users), indexed
+user_id       | integer   | not null, foreign key (references users), indexed
 commented_on  | string    | not null
 body          | string    | not null
 post_id       | integer   | not null, foreign key (references posts), indexed
@@ -53,12 +47,14 @@ post_id       | integer   | not null, foreign key (references posts), indexed
 ## Voting
 column name   | data type | details
 --------------|-----------|----------
-content_id    | integer   | not null, foreign key (references content), indexed
-downvotes     | integer   | not null
-upvotes       | integer   | not null
-users_voted   | string    | 
+id            | integer   | primary key, no null
+user_id       | integer   | not null, foreign key (references users), indexed
+content_type  | string    | not null
+post_id       | integer   | foreign key (references posts)
+subvuedit_id  | integer   | foreign key (references subvuedits)
+comment_id    | integer   | foreign key (references comments)
 
-*Overall votes will be dealt with in frontend. String of userIds that will be used to figure out if the current user has voted*
+*Overall votes will be dealt with in frontend. Depending on the content type there will be one id out of the three different types of content.*
 
 
 

@@ -43,6 +43,8 @@
     subvueddits: {
         games: {
             id: 1,
+            subscribed: true,
+            subscriptions: 400,
             posts: [{
                 id: 1,
                 subvueddit: 'v/games'
