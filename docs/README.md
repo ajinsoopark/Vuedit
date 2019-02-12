@@ -1,4 +1,5 @@
 # Vuedit
+[Trello Link](https://trello.com/b/8lPMYr7Z/reddit-clone)
 
 # Minimum Viable Product
 
