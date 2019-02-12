@@ -56,6 +56,10 @@ comment_id    | integer   | foreign key (references comments)
 
 *Overall votes will be dealt with in frontend. Depending on the content type there will be one id out of the three different types of content.*
 
-
+## Avatars
+column name   | data type | details
+--------------|-----------|----------
+id            | integer   | primary key, not null
+user_id       | integer   | not null, foreign key (references users), indexed
 
 *Scalability issues*
