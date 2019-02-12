@@ -90,8 +90,3 @@
     * Adds or Subtracts vote count for a comment
 * `PATCH /api/votes/post/:postId`
     * Adds or Subtracts vote count for a post
-
-## Avatars 
-
-* `GET /api/avatars/:userId`
-    * Get avatar for specific user

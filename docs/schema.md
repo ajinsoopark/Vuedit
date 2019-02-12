@@ -7,6 +7,7 @@ id            | integer   | primary key, not null
 username      | string    | indexed, not null unique
 email         | string    | indexed, not null unique
 password      | string    | not null
+avatar        | string    |
 
 *Users have posts, comments, and subscriptions to subvuedits.*
 
@@ -55,11 +56,3 @@ subvuedit_id  | integer   | foreign key (references subvuedits)
 comment_id    | integer   | foreign key (references comments)
 
 *Overall votes will be dealt with in frontend. Depending on the content type there will be one id out of the three different types of content.*
-
-## Avatars
-column name   | data type | details
---------------|-----------|----------
-id            | integer   | primary key, not null
-user_id       | integer   | not null, foreign key (references users), indexed
-
-*Scalability issues*

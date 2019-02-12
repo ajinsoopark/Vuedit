@@ -12,7 +12,6 @@ The end product will have at least the following:
 * **Subscriptions** - Will have a tie between users and Subvuedits
 * **Voting** - Voting system on comments and posts
 * **Subvuedit** - Subscriners, Posts, Rules
-* **Avatars** - Tied to users as their profile picture
 * Profiles to be viewed of users and their available information.
 * Hosting on Heroku
 
