@@ -18,8 +18,6 @@ id            | integer   | primary key, not null
 name          | string    | not null, unique
 descriptions  | string    | not null
 
-*String of userIds that will be used to figure out if the current user is subbed.*
-
 ## Subscriptions
 column name  | data type | details
 -------------|-----------|-------------
