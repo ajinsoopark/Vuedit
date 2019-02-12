@@ -20,7 +20,7 @@ user_subbed   | string    |
 
 *String of userIds taht will be used to figure out if the current user is subbed.*
 
-## Content
+<!-- ## Content
 column name   | data type | details
 --------------|-----------|-----------
 id            | integer   | primary key, not null
@@ -30,7 +30,25 @@ body          | string    | not null
 title         | string    | 
 subvuedit_id  | integer   | not null, foreign key (references subvuedits), indexed
 
-*Contents can either be comments, or posts.*
+*Contents can either be comments, or posts.* -->
+
+## Posts
+column name   | data type | details
+--------------|-----------|------------
+id            | integer   | primary key, not null
+user_id       | integer   | not null, foreign key (references users), indexed
+title         | string    | not null
+body          | string    | not null
+subvudedit_id | integer   | not null, foreign key (references subvuedits), indexed
+
+## Comments 
+column name   | data type | details 
+--------------|-----------|------------
+id            | integer   | primary key, not null
+user_id       | integer   | not null, foreign key (references, users), indexed
+commented_on  | string    | not null
+body          | string    | not null
+post_id       | integer   | not null, foreign key (references posts), indexed
 
 ## Voting
 column name   | data type | details
@@ -42,3 +60,6 @@ users_voted   | string    |
 
 *Overall votes will be dealt with in frontend. String of userIds that will be used to figure out if the current user has voted*
 
+
+
+*Scalability issues*

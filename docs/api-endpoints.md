@@ -39,7 +39,7 @@
 * `POST /api/subvuedits`
     * Creates a new subvuedit
 
-<!-- ## Posts 
+## Posts 
 
 * `GET /api/posts`
     * Posts index/search
@@ -67,9 +67,9 @@
 * `PATCH /api/comments/:commentId`
     * Allows user to update their comment
 * `DELETE /api/comments/:commentId`
-    * Deletes comment -->
+    * Deletes comment
 
-## Content
+<!-- ## Content
 
 * `GET /api/content/posts`
     * Posts index/search
@@ -94,7 +94,7 @@
 * `DELETE /api/content/comments/:commentId`
     * Deletes comment
 * `DELETE /api/content/posts/:postId`
-    * Deletes post
+    * Deletes post -->
 
 ## Voting
 
