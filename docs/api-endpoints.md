@@ -48,9 +48,9 @@
 
 * `GET /api/posts`
     * Posts index/search
-* `GET /api/posts/:subvueditId`
+* `GET /api/posts/subvuedit/:id`
     * Posts from certain subvuedit
-* `GET /api/posts/:userId`
+* `GET /api/posts/users/:id`
     * Posts from certain user
 * `POST /api/posts`
     * Creates new post
