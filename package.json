@@ -1,0 +1,26 @@
+{
+  "name": "vuedit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --kill-others \"cd frontend && npm start\" \"cd backend && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajinsoopark/Vuedit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajinsoopark/Vuedit/issues"
+  },
+  "homepage": "https://github.com/ajinsoopark/Vuedit#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  }
+}
