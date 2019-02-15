@@ -48,9 +48,9 @@
 
 * `GET /api/posts`
     * Posts index/search
-* `GET /api/posts/:subvueditId`
+* `GET /api/posts/subvuedit/:id`
     * Posts from certain subvuedit
-* `GET /api/posts/:userId`
+* `GET /api/posts/users/:id`
     * Posts from certain user
 * `POST /api/posts`
     * Creates new post
@@ -63,10 +63,12 @@
 
 * `GET /api/comments`
     * Comments index/search
-* `GET /api/comments/:userId`
+* `GET /api/comments/users/:id`
     * Comments from certain user
-* `GET /api/comments/:postId`
+* `GET /api/comments/posts/:id`
     * Comments from certain post
+* `GET /api/comments/comments/:id`
+    * Comments from a certain comment
 * `POST /api/comments`
     * Creates new comment
 * `PATCH /api/comments/:commentId`
