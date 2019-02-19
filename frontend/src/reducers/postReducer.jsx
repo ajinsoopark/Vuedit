@@ -1,13 +1,14 @@
 import { ADD_POST } from '../actions/actionTypes';
 
-const initialState = {};
+const initialState = [];
 
 const postReducer = (state = initialState, action) => {
-    let newState = {...state};
+    let newState = [...state];
 
     if (action.type === ADD_POST) {
-        newState.posts = newState.posts.concat(action.payload)
+        newState = newState.concat(action.payload)
     }
+    
     return newState;
 }
 

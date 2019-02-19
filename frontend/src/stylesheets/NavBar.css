@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.searchSvg {
+    fill: rgb(129, 131, 132);
+    width: 18px;
+	height: 18px;
+	overflow: hidden;
+	padding-top: 7px;
+	padding-left: 13px;
+}
+
+.searchFormInput {
+    background-color: rgb(39, 39, 41);
+    box-shadow: none;
+    color: rgb(215, 218, 220);
+    display: block;
+    height: 32px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(52, 53, 54);
+    border-image: initial;
+    outline: none;
+	padding: 0px 16px 0px 33px;
+	line-height: 21px;
+	font-size: 14px;
+	width: 298px;
+}
+
+.navSearchBar {
+	border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+	border-image: initial;
+	height: 32px;
+}
+
+.navbar {
+	display: inline-flex;
+	box-align: center;
+	align-items: center;
+	margin-top: 0px;
+	height: 45px;
+	position: relative;
+	background-color: rgb(26, 26, 27);
+	border-bottom: 1px solid rgb(52, 53, 54);
+	width: 100%;
+}
+
+.searchLabel {
+	position: absolute;
+}
