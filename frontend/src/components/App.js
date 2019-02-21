@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import { mapStateToProps, mapDispatchToProps } from '../reduxUtils';
-import { connect } from 'react-redux';
+
 
 import HomeContainer from '../containers/homeContainer';
-import NavBar from './NavBar/NavBar';
+import NavBarContainer from '../containers/navBarContainer';
+import FilterContainer from '../containers/filterContainer';
 
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route component={ NavBar }/>
+        <Route component={ NavBarContainer }/>
+        <Route component={ FilterContainer }/>
         <Switch>
           <Route exact path='/' component={ HomeContainer } />
         </Switch>

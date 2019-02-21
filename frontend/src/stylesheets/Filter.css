@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+* {
+    font-family: IBM Plex Sans;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.viewAndSort {
+    display: flex;
+    flex-direction: row;
+    background: rgb(26, 26, 27);
+    justify-content: left;
+    max-width: 1248px;
+    height: 38px;
+    padding-left: 130px;
+}
+
+.viewText {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: rgb(129, 131, 132);
+    margin-top: 1px;
+    margin-right: 10px;
+}
+
+.viewOptions {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px 10px 0px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+    vertical-align: baseline;
+    margin-left: 4px;
+    outline: none;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+svg {
+    fill: rgba(215, 218, 220, 0.2);
+    height: 20px;
+    width: 20px;
+}
+
+.filterDivider {
+    height: 25px;
+    width: 1px;
+    background: rgb(52, 53, 54);
+    margin-top: 6px;
+}
+
+.sortText {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: rgb(129, 131, 132);
+    margin-top: 1px;
+}
+
+.sortOptions {
+    align-items: center;
+    display: flex;
+    margin: 7px 0px;
+    padding: 0px 16px;
+}

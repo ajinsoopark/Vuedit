@@ -7,6 +7,9 @@
 	vertical-align: baseline;
 }
 
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+
 .searchSvg {
     fill: rgb(129, 131, 132);
     width: 18px;
@@ -17,6 +20,7 @@
 }
 
 .searchFormInput {
+	font-family: IBM Plex Sans, Verdana, Arial, sans-serif;
     background-color: rgb(39, 39, 41);
     box-shadow: none;
     color: rgb(215, 218, 220);
@@ -58,3 +62,27 @@
 .searchLabel {
 	position: absolute;
 }
+
+.homeSvg {
+	height: 28px;
+	width: 28px;
+	margin-left: 15px;
+}
+
+.homeLink {
+	align-items: center;
+}
+
+.homeLogo {
+	max-height: 32px;
+	max-width: 32px;
+}
+
+.vueditSvg {
+	height: 18px;
+	margin-right: 20px;
+	width: auto;
+	margin-left: 9px;
+	margin-bottom: 6px;
+}
+

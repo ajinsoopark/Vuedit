@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { mapDispatchToProps, mapStateToProps } from '../reduxUtils';
+
 import PostsFeed from '../components/postsComponent/PostFeed';
+import '../stylesheets/homeFeed.css';
 
 class HomeContainer extends Component {
 
@@ -27,7 +29,7 @@ class HomeContainer extends Component {
 
     render () {
         const { posts } =  this.props;
-        console.log(this.props)
+
         return (
             <PostsFeed 
             posts={ posts }/>
