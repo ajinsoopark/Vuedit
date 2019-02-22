@@ -1,7 +1,6 @@
 const { db } = require('../index');
 
 const getAllPosts = (req, res, next) => {
-    console.log(req.params)
     db.any('SELECT * FROM posts')
     .then(posts => {
         res.status(200)
@@ -123,7 +122,7 @@ const editPost = (req, res, next) => {
         res.status(200)
         .json({
             status: 'Success',
-            message: 'Updated post'
+            message: `Updated post(${postId})`
         })
     })
     .catch(err => {

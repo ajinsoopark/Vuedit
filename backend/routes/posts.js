@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { getAllPosts, getSubvueditPosts, getUsersPosts, createPost, editPost, getSinglePost, deletePost } = require('../db/queries/postQueries');
+const { getAllPosts, 
+        getSubvueditPosts, 
+        getUsersPosts, 
+        createPost, 
+        editPost, 
+        getSinglePost, 
+        deletePost } = require('../db/queries/postQueries');
 
 router.get('/', getAllPosts);
 router.get('/subvuedits/:id', getSubvueditPosts);
