@@ -49,7 +49,7 @@ CREATE TABLE voting (
     post_id INT REFERENCES posts(id),
     sub_id INT REFERENCES subvuedits(id),
     comment_id INT REFERENCES comments(id),
-    vote_type VARCHAR NOT NULL
+    vote_type VARCHAR
 );
 
 INSERT INTO users (username, email, avatar)

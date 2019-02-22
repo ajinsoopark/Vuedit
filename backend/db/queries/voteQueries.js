@@ -83,10 +83,70 @@ const getUserVotes = (req, res, next) => {
     });
 };
 
+const updatePostVote = (req, res, next) => {
+    let userId = parseInt(req.params.userId);
+    let postId = parseInt(req.params.postId);
+
+    db.none('UPDATE voting SET user_id=${user_id}, content_type=${content_type}, post_id=${post_id}, sub_id=${sub_id}, comment_id=${comment_id}, vote_type=${vote_type} WHERE user_id=${user_id} AND post_id=${post_id}',
+    {
+        user_id: userId,
+        post_id: postId,
+        content_type: 'post',
+        sub_id: req.body.sub_id,
+        comment_id: req.body.comment_id,
+        vote_type: req.body.vote_type
+    })
+    .then(() => {
+        res.status(200)
+        .json({
+            status: 'Success',
+            message: 'Updated vote'
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            status: 'Failed',
+            message: err
+        })
+    });
+};
+
+const updateCommentVote = (req, res, next) => {
+    let userId = parseInt(req.params.userId);
+    let commentId = parseInt(req.params.commentId);
+
+    db.none('UPDATE voting SET user_id=${user_id}, content_type=${content_type}, post_id=${post_id}, sub_id=${sub_id}, comment_id=${comment_id}, vote_type=${vote_type} WHERE user_id=${user_id} AND post_id=${post_id}',
+    {
+        user_id: userId,
+        post_id: req.body.post_id,
+        content_type: 'comment',
+        sub_id: req.body.sub_id,
+        comment_id: commentId,
+        vote_type: req.body.vote_type
+    })
+    .then(() => {
+        res.status(200)
+        .json({
+            status: 'Success',
+            message: 'Updated vote'
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            status: 'Failed',
+            message: err
+        })
+    });
+};
+
 
 module.exports = {
     getCommentVotes,
     getPostVotes,
     getSubvueditVotes,
-    getUserVotes
+    getUserVotes,
+    updatePostVote,
+    updateCommentVote
 }
