@@ -8,7 +8,6 @@ const userReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_USER: {
             return newState = newState.concat(action.payload)
-            break;
         }
     }
     

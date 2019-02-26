@@ -28,6 +28,7 @@
     line-height: 20px;
     vertical-align: baseline;
     text-decoration: none;
+    z-index: 3;
 }
 
 .visuals {
@@ -52,6 +53,7 @@
     font: inherit;
     vertical-align: baseline;
     font-size: 12px;
+    z-index: 3;
 }
 
 .authorUsername {
@@ -86,11 +88,13 @@
     position: relative;
     text-decoration: none;
     word-break: break-word;
+    z-index: 3;
 }
 
 .titleLink {
     color: inherit;
     text-decoration: inherit;
+    z-index: 3;
 }
 
 .titleHeader {
@@ -102,6 +106,7 @@
     font-weight: 500;
     line-height: 22px;
     padding-right: 5px;
+    z-index: 3;
 }
 
 .commentsLink {
@@ -116,6 +121,7 @@
     padding: 4px;
     margin-right: 4px;
     text-decoration: inherit;
+    z-index: 3;
 }
 
 .post {
@@ -136,6 +142,7 @@
     border-radius: 4px;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 1;
 }
 
 .postsType {
@@ -196,6 +203,7 @@
     padding: 8px 4px 8px 0;
     position: absolute;
     top: 0;
+    z-index: 3;
 }
 
 .voteDiv {
@@ -214,6 +222,7 @@
     color: inherit;
     cursor: pointer;
     padding: initial;
+    z-index: 3;
 }
 
 .upvoteIconDiv {
@@ -227,12 +236,14 @@
     color: rgb(129, 131, 132);
     border-radius: 2px;
     transition: background-color 0.1s ease 0s;
+    z-index: 3;
 }
 
 .upSVG {
     height: 15px;
     width: 15px;
     padding-right: 3px;
+    z-index: 3;
 }
 
 .voteSum {
@@ -252,6 +263,7 @@
     color: inherit;
     cursor: pointer;
     padding: initial;
+    z-index: 3;
 }
 
 .downvoteIconDiv {
@@ -265,10 +277,12 @@
     color: rgb(129, 131, 132);
     border-radius: 2px;
     transition: background-color 0.1s ease 0s;
+    z-index: 3;
 }
 
 .downSVG {
     height: 15px;
     width: 15px;
     padding-right: 3px;
+    z-index: 3;
 }

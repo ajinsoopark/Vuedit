@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
-import { addPost, fetchAllPosts } from '../../actions/postActions';
 
-import PostsFeed from './PostFeed';
+import CurrentPost from './currentPost';
 
 const mapStateToProps = state => {
     return {
@@ -11,12 +10,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addPost: post => dispatch(addPost(post)),
-        fetchAllPosts: posts => dispatch(fetchAllPosts(posts))
         }
 }
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(PostsFeed);
+)(CurrentPost);

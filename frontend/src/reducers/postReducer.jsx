@@ -1,4 +1,5 @@
-import { ADD_POST } from '../actions/postActions';
+import { ADD_POST,
+         CURRENT_POST } from '../actions/postActions';
 
 const initialState = [];
 
@@ -8,7 +9,10 @@ const postReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST: {
             return newState = newState.concat(action.payload)
-            break;
+        }
+        case CURRENT_POST: {
+            newState = action.payload
+            return newState
         }
     }
     

@@ -3,10 +3,6 @@ import Post from './post';
 import '../../stylesheets/Posts.css';
 
 class PostsFeed extends Component {
-    constructor (props) {
-        super (props)
-
-    } 
 
     componentDidMount () {
         this.props.fetchAllPosts();

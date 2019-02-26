@@ -4,7 +4,7 @@ const Advertisement = () => {
     return (
         <div className='advertisement'>
             <div className='adContainer'>
-                <img className='adImage' src='https://i.imgur.com/LocDDRJ.png'/>
+                <img alt='' className='adImage' src='https://i.imgur.com/LocDDRJ.png'/>
             </div>
         </div>
     )

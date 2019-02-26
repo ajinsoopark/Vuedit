@@ -6,6 +6,7 @@ CREATE DATABASE vuedit;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR NOT NULL UNIQUE,
+    password_digest VARCHAR NOT NULL,
     email VARCHAR NOT NULL UNIQUE,
     avatar VARCHAR,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

@@ -3,13 +3,8 @@ import { Link } from 'react-router-dom';
 import TimeAgo from 'react-timeago';
 
 class Post extends Component {
-    constructor (props) {
-        super (props)
-    }
-
 
     render () {
-
         return (
             <div className='post'>
                 <div className='postVoting'>
@@ -35,7 +30,7 @@ class Post extends Component {
                     <div className='postTimeUserSub'>
                         <div className='timeUserSub'>
                             <Link className='subvueditLink' to={ '' }>
-                                <img className='linkIcon' src='https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png'>
+                                <img alt='' className='linkIcon' src='https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png'>
                                 </img>
                             </Link>
                             <Link className='subvuedit' to={ '' }>
@@ -51,7 +46,7 @@ class Post extends Component {
                     </div>
                     <div className='postTitle'>
                         <span className='titleSpan'>
-                            <Link className='titleLink' to={ '' }>
+                            <Link className='titleLink' to={ `/post/${this.props.id}` }>
                                 <h2 className='titleHeader'>{ this.props.title }</h2>
                             </Link>
                         </span>
