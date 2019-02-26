@@ -176,3 +176,99 @@
     display: block;
     padding-top: 4px;
 }
+
+.postVoting {
+    width: 40px;
+    border-left: 4px solid transparent;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    padding: 8px 4px 8px 0;
+    position: absolute;
+    top: 0;
+}
+
+.voteDiv {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    fill: inherit;
+    flex-direction: column;
+}
+
+.upvoteButton {
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.upvoteIconDiv {
+    display: inline-block;
+    overflow: hidden;
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    transition: background-color 0.1s ease 0s;
+}
+
+.upSVG {
+    height: 15px;
+    width: 15px;
+    padding-right: 3px;
+}
+
+.voteSum {
+    color: rgb(215, 218, 220);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    pointer-events: none;
+    word-break: normal;
+}
+
+.downvoteButton {
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.downvoteIconDiv {
+    display: inline-block;
+    overflow: hidden;
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    transition: background-color 0.1s ease 0s;
+}
+
+.downSVG {
+    height: 15px;
+    width: 15px;
+    padding-right: 3px;
+}

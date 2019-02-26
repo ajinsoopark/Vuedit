@@ -1,64 +1,35 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 import TimeAgo from 'react-timeago';
 
 class Post extends Component {
     constructor (props) {
         super (props)
-        this.state = {
-            voteSum: null,
-            commentCount: null
-        }
-    }
-
-    componentDidMount () {
-        this.fetchPostVotes();
-        this.fetchPostComments();
-    }
-
-    fetchPostVotes () {
-        if (this.props.id) {
-            axios
-            .get(`/votes/posts/${this.props.id}`)
-            .then(votes => {
-                return votes.data.data
-            })
-            .then(votes => {
-                if (!votes.length) {
-                    this.setState({ voteSum: 0 })
-                } else {
-                    let voteSum = 0;
-                    votes.forEach(voteObj => {
-                        voteSum += voteObj.vote
-                    })
-                    this.setState({ voteSum: voteSum })
-                }
-            })
-        }
-    }
-
-    fetchPostComments () {
-        if (this.props.id) {
-            axios
-            .get(`/comments/posts/${this.props.id}`)
-            .then(comments => {
-                return comments.data.data
-            })
-            .then(comments => {
-                this.setState({ commentCount: comments.length })
-            })
-        }
     }
 
 
     render () {
-        const { voteSum, commentCount } = this.state;
 
         return (
             <div className='post'>
                 <div className='postVoting'>
-                    {voteSum}
+                    <div className='votingArea'>
+                        <div className='voteDiv'>
+                            <button className='upvoteButton'>
+                                <div className='upvoteIconDiv'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className='upSVG' viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg>
+                                </div>
+                            </button>
+                        <div className='voteSum' >
+                            {this.props.voteSum ? this.props.voteSum : 0}
+                        </div>
+                            <button className='downvoteButton'>
+                                <div className='downvoteIconDiv'>
+                                <svg xmlns="http://www.w3.org/2000/svg" className='downSVG' viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div className='postContent'>
                     <div className='postTimeUserSub'>
@@ -87,7 +58,7 @@ class Post extends Component {
                     </div>
                     <div className='commentsDiv'>
                         <Link className='commentsLink' to={ '' }>
-                            { `${commentCount} Comments` }
+                            { `${this.props.commentCount ? this.props.commentCount : 0 } Comments` }
                         </Link>
                     </div>
                 </div>

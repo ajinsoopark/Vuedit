@@ -57,6 +57,8 @@
 	background-color: rgb(26, 26, 27);
 	border-bottom: 1px solid rgb(52, 53, 54);
 	width: 100%;
+	position: fixed;
+	z-index: 3;
 }
 
 .searchLabel {

@@ -24,7 +24,7 @@ class PostsFeed extends Component {
                     body={ postObj.body }
                     username={ postObj.username }
                     createdTime={ postObj.created_at }
-                    subvuedit={ postObj.name }
+                    subvuedit={ postObj.sub_name }
                     voteSum={ postObj.vote_sum }
                     commentCount={ postObj.comment_count }
                     />
