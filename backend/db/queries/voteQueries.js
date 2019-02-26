@@ -141,6 +141,54 @@ const updateCommentVote = (req, res, next) => {
     });
 };
 
+const updateSubvueditVote = (req, res, next) => {
+    let userId = parseInt(req.params.userId);
+    let subId = parseInt(req.params.subId);
+
+    db.none('UPDATE voting SET user_id=${user_id}, content_type=${content_type}, post_id=${post_id}, sub_id=${sub_id}, comment_id=${comment_id}, vote_type=${vote_type} WHERE user_id=${user_id} AND post_id=${post_id}',
+    {
+        user_id: userId,
+        post_id: req.body.post_id,
+        content_type: 'sub',
+        sub_id: subId,
+        comment_id: req.body.comment_id,
+        vote_type: req.body.vote_type
+    })
+    .then(() => {
+        res.status(200)
+        .json({
+            status: 'Success',
+            message: 'Updated vote'
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            status: 'Failed',
+            message: err
+        })
+    });
+};
+
+const createVote = (req, res, next) => {
+    db.none('INSERT INTO voting(user_id, content_type, post_id, sub_id, comment_id, vote_type) VALUES (${user_id}, ${content_type}, ${post_id}, ${sub_id}, ${comment_id}, ${vote_type})',
+            req.body)
+        .then(() => {
+            res.status(200)
+            .json({
+                status: 'Success',
+                message: 'Created vote'
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.json({
+                status: 'Failed',
+                message: err
+            })
+        });
+};
+
 
 module.exports = {
     getCommentVotes,
@@ -148,5 +196,7 @@ module.exports = {
     getSubvueditVotes,
     getUserVotes,
     updatePostVote,
-    updateCommentVote
+    updateCommentVote,
+    updateSubvueditVote,
+    createVote
 }

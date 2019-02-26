@@ -49,7 +49,7 @@ CREATE TABLE voting (
     post_id INT REFERENCES posts(id),
     sub_id INT REFERENCES subvuedits(id),
     comment_id INT REFERENCES comments(id),
-    vote_type VARCHAR
+    vote INT 
 );
 
 INSERT INTO users (username, email, avatar)
@@ -86,11 +86,11 @@ VALUES (1, 'post', 'OMG thats amazing I never knew that!', 1, null),
        (2, 'post', 'nah I dont like it its just not for me meh', 1, null),
        (7, 'post', 'I thought it was awesome but the ending was so terrible', 2, null);
 
-INSERT INTO voting (user_id, content_type, post_id, sub_id, comment_id, vote_type)
-VALUES (2, 'post', 1, null, null, 'up'),
-       (1, 'post', 3, null, null, 'up'),
-       (1, 'post', 4, null, null, 'up'),
-       (2, 'sub', null, 2, null, 'up'),
-       (4, 'sub', null, 2, null, 'down'),
-       (6, 'post', 1, null, null, 'up');
+INSERT INTO voting (user_id, content_type, post_id, sub_id, comment_id, vote)
+VALUES (2, 'post', 1, null, null, -1),
+       (1, 'post', 3, null, null, 1),
+       (1, 'post', 4, null, null, 1),
+       (2, 'sub', null, 2, null, 1),
+       (4, 'sub', null, 2, null, -1),
+       (6, 'post', 1, null, null, 1);
 

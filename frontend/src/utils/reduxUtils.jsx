@@ -1,5 +1,5 @@
-import { addUser } from './actions/userActions';
-import { addPost } from './actions/postActions';
+import { addUser } from '../actions/userActions';
+import { addPost } from '../actions/postActions';
 
 export const mapStateToProps = state => {
     return {

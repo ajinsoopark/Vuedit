@@ -75,6 +75,25 @@ const getUsersPosts = (req, res, next) => {
     })
 };
 
+const getPostsWithAllInfo = (req, res, next) => {
+    db.any('SELECT title, body, p.created_at, username, name AS sub_name, SUM AS vote_sum, COUNT AS comment_count FROM posts AS p INNER JOIN users AS u ON p.user_id = u.id INNER JOIN subvuedits AS s ON p.sub_id = s.id LEFT JOIN (SELECT COUNT, post_id FROM posts JOIN (SELECT count(*), post_id FROM comments GROUP BY post_id) AS counts ON counts.post_id = posts.id) AS c ON c.post_id = p.id LEFT JOIN (SELECT post_id, SUM FROM posts JOIN (SELECT post_id, SUM(vote) FROM voting GROUP BY post_id) AS votesum ON votesum.post_id = posts.id) AS v ON v.post_id = p.id')
+    .then(posts => {
+        res.status(200)
+        .json({
+            status: 'Success',
+            data: posts,
+            message: 'Received posts with creators and pertaining subvuedit'
+        })
+    })
+    .catch(err => {
+        console.log(err);
+        res.json({
+            status: 'Failed',
+            message: err
+        })
+    })
+};
+
 const createPost = (req, res, next) => {
     db.none('INSERT INTO posts(user_id, title, body, sub_id) VALUES (${user_id}, ${title}, ${body}, ${sub_id})', req.body)
     .then(() => {
@@ -161,5 +180,6 @@ module.exports = {
     createPost,
     editPost,
     getSinglePost,
-    deletePost
+    deletePost,
+    getPostsWithAllInfo
 }

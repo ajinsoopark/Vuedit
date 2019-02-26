@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchForm from './NavSearch'
+import SearchForm from './SearchForm'
+import NavDropdown from './NavDropdown'
 
 const NavBar = () => {
     return (
@@ -25,6 +26,9 @@ const NavBar = () => {
                         </g>
                     </svg>
                 </Link>
+            </div>
+            <div className='navMenu'>
+                <NavDropdown />
             </div>
             <div className='navSearch'>
                 <SearchForm />

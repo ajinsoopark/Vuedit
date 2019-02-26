@@ -1,13 +1,17 @@
-import { ADD_USER } from '../actions/actionTypes';
+import { ADD_USER } from '../actions/userActions';
 
-const initialState = {}
+const initialState = []
 
 const userReducer = (state = initialState, action) => {
-    let newState = {...state};
+    let newState = [...state];
 
-    if (action.type === ADD_USER) {
-        newState.users = newState.users.concat(action.payload)
+    switch (action.type) {
+        case ADD_USER: {
+            return newState = newState.concat(action.payload)
+            break;
+        }
     }
+    
     return newState;
 }
 

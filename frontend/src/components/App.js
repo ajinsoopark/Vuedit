@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-
-import HomeContainer from '../containers/homeContainer';
-import NavBarContainer from '../containers/navBarContainer';
-import FilterContainer from '../containers/filterContainer';
-
+import NavBarContainer from './NavBar/navBarContainer';
+import FilterContainer from './filterComponent/filterContainer';
+import HomeContainer from './home/homeContainer';
 
 class App extends Component {
   render() {

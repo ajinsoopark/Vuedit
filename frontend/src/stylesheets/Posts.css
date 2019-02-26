@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: IBM Plex Sans;
+    vertical-align: baseline;
+}
+
+.postFeed {
+    width: 648px;
+    min-width: 0px;
+}
+
+.linkIcon {
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+}
+
+.subvuedit {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(215, 218, 220);
+    display: inline;
+    line-height: 20px;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.visuals {
+    color: rgb(129, 131, 132);
+    font-size: 12px;
+    line-height: 20px;
+    vertical-align: middle;
+    margin: 0 4px;
+    padding: 0;
+    border: 0;
+}
+
+.postedBy {
+    color: rgb(129, 131, 132);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-right: 3px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 12px;
+}
+
+.authorUsername {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    color: rgb(129, 131, 132);
+    margin-right: 3px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.timeCreated {
+    color: rgb(129, 131, 132);
+    margin-right: 3px;
+    text-decoration: none;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+.timeAgo {
+    font-size: 12px;
+}
+
+.titleSpan {
+    display: inline;
+    position: relative;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.titleLink {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.titleHeader {
+    color: rgb(111, 112, 113);
+    display: inline;
+    color: rgb(215, 218, 220);
+    overflow-wrap: break-word;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-right: 5px;
+}
+
+.commentsLink {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    border-radius: 2px;
+    color: rgb(129, 131, 132);
+    word-break: normal;
+    white-space: nowrap;
+    min-width: 25px;
+    padding: 4px;
+    margin-right: 4px;
+    text-decoration: inherit;
+}
+
+.post {
+    display: block;
+    position: relative;
+    background-color: rgba(26, 26, 27, 0.8);
+    margin-bottom: 10px;
+    color: rgb(129, 131, 132);
+    fill: rgb(129, 131, 132);
+    cursor: pointer;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(52, 53, 54);
+    border-image: initial;
+    transition: color 0.5s ease 0s, fill 0.5s ease 0s, box-shadow 0.5s ease 0s;
+    padding-left: 40px;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.postsType {
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(215, 218, 220);
+    text-transform: unset;
+}
+
+.homeSplash {
+    background-color: rgb(3, 46, 94);
+    background-size: contain;
+    position: relative;
+    margin-bottom: 8px;
+    background-image: url(https://www.redditstatic.com/desktop2x/img/banner/banner-welcome@2x.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    padding: 16px;
+    height: 118px;
+}
+
+.splashHeader {
+    line-height: 26px;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.splashSpan {
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(255, 255, 255);
+    display: block;
+    padding-top: 4px;
+}

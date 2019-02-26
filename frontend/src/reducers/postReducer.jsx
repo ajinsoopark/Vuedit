@@ -1,12 +1,15 @@
-import { ADD_POST } from '../actions/actionTypes';
+import { ADD_POST } from '../actions/postActions';
 
 const initialState = [];
 
 const postReducer = (state = initialState, action) => {
     let newState = [...state];
 
-    if (action.type === ADD_POST) {
-        newState = newState.concat(action.payload)
+    switch (action.type) {
+        case ADD_POST: {
+            return newState = newState.concat(action.payload)
+            break;
+        }
     }
     
     return newState;

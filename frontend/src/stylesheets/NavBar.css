@@ -25,7 +25,7 @@
     box-shadow: none;
     color: rgb(215, 218, 220);
     display: block;
-    height: 32px;
+    height: 36px;
     border-radius: 4px;
     border-width: 1px;
     border-style: solid;
@@ -35,7 +35,7 @@
 	padding: 0px 16px 0px 33px;
 	line-height: 21px;
 	font-size: 14px;
-	width: 298px;
+	width: 356px;
 }
 
 .navSearchBar {
@@ -52,7 +52,7 @@
 	box-align: center;
 	align-items: center;
 	margin-top: 0px;
-	height: 45px;
+	height: 48px;
 	position: relative;
 	background-color: rgb(26, 26, 27);
 	border-bottom: 1px solid rgb(52, 53, 54);
@@ -84,5 +84,6 @@
 	width: auto;
 	margin-left: 9px;
 	margin-bottom: 6px;
+	padding-top: 5px;
 }
 

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.homeFeed {
+    background-color: black;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 1280px;
+    position: relative;
+    margin: 0px auto;
+    padding: 20px 24px;
+}
+
+.miscFeed {
+    margin-left: 24px;
+    display: block;
+    width: 312px;
+    margin-top: 28px;
+    flex: 0 0 312px;
+}
+
+.advertisement {
+    margin-top: 16px;
+    width: 290px;
+}
+
+.adContainer {
+    overflow-wrap: break-word;
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+    padding: 6px;
+}
