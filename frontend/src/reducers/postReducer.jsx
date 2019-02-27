@@ -1,18 +1,38 @@
-import { ADD_POST,
-         CURRENT_POST } from '../actions/postActions';
+import { 
+        ADD_POST,
+        CURRENT_POST,
+        REPLACE_POSTS } from '../actions/postActions';
 
-const initialState = [];
+const initialState = {
+    changesMade: true,
+    currentPost: null,
+    postFeed: []
+};
 
 const postReducer = (state = initialState, action) => {
-    let newState = [...state];
+    let newState = {...state};
 
     switch (action.type) {
         case ADD_POST: {
-            return newState = newState.concat(action.payload)
+            if (newState.changesMade) {
+                newState.postFeed = [...newState.postFeed, ...action.payload]
+                newState.changesMade = false
+                return newState
+                break;
+            }
+        }
+        case REPLACE_POSTS: {
+            if (newState.changesMade) {
+                newState.postFeed = [...action.payload]
+                newState.changesMade = false
+                return newState
+                break;
+            }
         }
         case CURRENT_POST: {
-            newState = [action.payload.data.data]
+            newState.currentPost = action.payload
             return newState
+            break;
         }
     }
     
