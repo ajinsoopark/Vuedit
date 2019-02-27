@@ -4,7 +4,7 @@ import { withRouter } from 'react-router';
 
 import NavBarContainer from './NavBar/navBarContainer';
 import HomeContainer from './home/homeContainer';
-import CurrentPostContainer from './postsComponent/currentPostContainer';
+import CurrentPostContainer from './postsComponent/currentPostLeft/currentPostContainer';
 
 class App extends Component {
   render() {
