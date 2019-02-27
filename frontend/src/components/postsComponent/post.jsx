@@ -46,7 +46,7 @@ class Post extends Component {
                     </div>
                     <div className='postTitle'>
                         <span className='titleSpan'>
-                            <Link className='titleLink' to={ `/post/${this.props.id}` }>
+                            <Link className='titleLink' to={ `/posts/${this.props.id}` }>
                                 <h2 className='titleHeader'>{ this.props.title }</h2>
                             </Link>
                         </span>

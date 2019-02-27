@@ -8,7 +8,7 @@ export const currentPost = payload => ({ type: CURRENT_POST, payload })
 
 export const fetchPost = (id) => dispatch => {
     return PostAPIUtil.fetchPost(id)
-    .then(post => dispatch())
+    .then(post => dispatch(currentPost(post)))
 }
 
 export const fetchAllPosts = () => dispatch => {

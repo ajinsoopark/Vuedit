@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+div {
+    display: block;
+}
+
+.currentPostContainer {
+    top: 48px;
+    background-color: rgba(28, 28, 28, 0.9);
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    right: 0px;
+    width: 100%;
+    z-index: 50;
+}
+
+.headerBar {
+    box-sizing: border-box;
+    height: 348px;
+    left: 0px;
+    max-width: 1600px;
+    padding-top: 300px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: calc(100% - 160px);
+    z-index: 70;
+    background: rgb(3, 3, 3);
+    margin: -300px auto 0px;
+    top: 48px;
+}
+
+.headerBarInfo {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    margin: auto;
+    padding: 0px 32px;
+    max-width: 1280px;
+}
+
+.titleAndVoting {
+    max-width: calc(100% - 324px);
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.headerVoting {
+    fill: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px 2px;
+    width: 100%;
+}
+
+.voteButton {
+    height: 24px;
+    width: 24px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.SVGDiv {
+    display: inline-block;
+    overflow: hidden;
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    transition: background-color 0.1s ease 0s;
+}
+
+svg {
+    position: relative;
+}
+
+.voteSumHeader {
+    color: rgb(215, 218, 220);
+    line-height: 15px;
+    text-align: center;
+    width: 32px;
+    margin: 0px 1px;
+    font-size: 12px;
+    font-weight: 700;
+    pointer-events: none;
+    word-break: normal;
+}
+
+.titleSVG {
+    cursor: pointer;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 18px;
+    padding-right: 8px;
+}
+
+.titleHeaderDiv {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    display: inline-flex;
+    min-width: 0;
+}
+
+.titleHeaderSpan {
+    display: flex;
+    min-width: 0px;
+    position: relative;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.titleHeader {
+    display: inline;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(215, 218, 220);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 5px;
+    overflow: hidden;
+}
+
+.closeHeaderDiv {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-left: 12px;
+    width: 312px;
+    display: flex;
+    justify-content: flex-end;
+    -webkit-box-pack: end;
+}
+
+.spacingDivOne {
+    visibility: hidden;
+    position: absolute;
+    left: -99999px;
+    top: 0;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    vertical-align: text-top;
+}
+
+.closeButton {
+    border-radius: 4px;
+    color: #818384;
+    display: inline-block;
+    line-height: 22px;
+    height: 24px;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: transparent;
+    fill: rgb(215, 218, 220);
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    text-decoration: none;
+    padding: 3px 16px;
+    cursor: pointer;
+}
+
+.closeSVG {
+    fill: #818384;
+    height: 22px;
+    margin-right: 8px;
+    vertical-align: top;
+    width: 12px;
+    overflow: hidden;
+    color: #818384;
+    line-height: 22px;
+}
+
+polygon {
+    fill: inherit;
+    transform-origin: 0px 0px;
+}
+
+.closeSpan {
+    display: inline-block;
+    height: 24px;
+    line-height: 21px;
+    vertical-align: bottom;
+}
+
+.currentPostMain {
+    top: 48px;
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    backface-visibility: hidden;
+    right: 0px;
+    width: 100%;
+    z-index: 50;
+}
+
+.mainContainer {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.main {
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 1600px;
+    overflow-y: hidden;
+    padding-bottom: 32px;
+    position: relative;
+    width: calc(100% - 160px);
+    margin: 48px auto 0px;
+}
+
+.mainLeftContainer {
+    max-width: 890px;
+    min-height: 100vh;
+    min-width: 0px;
+    padding-bottom: 1px;
+    width: 100%;
+    word-break: break-word;
+    flex: 1 1 0%;
+    margin: 32px 12px 32px 32px;
+}
+
+.mainRightContainer {
+    display: block;
+    right: 0px;
+    top: 0px;
+    width: 312px;
+    margin: 32px 32px 32px 0px;
+    padding: 0px;
+}
+
+.mainLeft {
+    word-break: break-word;
+    background: rgb(26, 26, 27);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(52, 53, 54);
+    border-image: initial;
+    border-radius: 4px;
+}
+
+.joinSplashDiv {
+    background-color: rgb(3, 46, 94);
+    background-size: contain;
+    position: relative;
+    background-image: url(https://www.redditstatic.com/desktop2x/img/banner/banner-small@2x.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    border-radius: 0px;
+    padding: 4px 32px 4px 8px;
+}
+
+.splashCloseButton {
+    height: 12px;
+    width: 12px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.splashContent {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 42px;
+}
+

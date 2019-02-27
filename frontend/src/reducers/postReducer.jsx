@@ -11,7 +11,7 @@ const postReducer = (state = initialState, action) => {
             return newState = newState.concat(action.payload)
         }
         case CURRENT_POST: {
-            newState = action.payload
+            newState = [action.payload.data.data]
             return newState
         }
     }

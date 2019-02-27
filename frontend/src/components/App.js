@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-// import { withRouter } from 'react-router';
+import { withRouter } from 'react-router';
 
 import NavBarContainer from './NavBar/navBarContainer';
 import HomeContainer from './home/homeContainer';
@@ -13,11 +13,11 @@ class App extends Component {
         <Route component={ NavBarContainer }/>
         <Switch>
           <Route exact path='/' component={ HomeContainer } />
-          <Route exact path='/posts/:id' component={ CurrentPostContainer }/>
+          <Route path='/posts/:id' component={ CurrentPostContainer }/>
         </Switch>
       </React.Fragment>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
