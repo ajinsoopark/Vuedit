@@ -61,6 +61,7 @@
     margin: 0;
     height: 10px;
     width: 6px;
+    padding-right: 15px;
 }
 
 g {
@@ -68,15 +69,17 @@ g {
 }
 
 .commentSortMenu {
-    box-shadow: rgba(215, 218, 220, 0.2) 0px 2px 4px 0px;
+    /* box-shadow: rgba(215, 218, 220, 0.2) 0px 2px 4px 0px; */
     color: rgb(215, 218, 220);
     margin-top: 8px;
     position: relative;
     display: inline-flex;
     z-index: 80;
     background-color: rgb(26, 26, 27);
-    border-radius: 4px;
+    /* border-radius: 4px; */
     overflow: hidden;
+    margin-bottom: 20px;
+    visibility: hidden;
 }
 
 .optionLink {

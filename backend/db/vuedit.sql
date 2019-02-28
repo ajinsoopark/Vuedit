@@ -6,7 +6,7 @@ CREATE DATABASE vuedit;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR NOT NULL UNIQUE,
-    password_digest VARCHAR NOT NULL,
+    -- password_digest VARCHAR NOT NULL,
     email VARCHAR NOT NULL UNIQUE,
     avatar VARCHAR,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -20,8 +20,8 @@ CREATE TABLE subvuedits (
 
 CREATE TABLE subscriptions (
     id SERIAL PRIMARY KEY,
-    sub_id INT REFERENCES subvuedits(id) ON DELETE CASCADE NOT NULL,
-    user_id INT REFERENCES users(id) ON DELETE CASCADE NOT NULL
+    user_id INT REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+    sub_id INT REFERENCES subvuedits(id) ON DELETE CASCADE NOT NULL
 );
 
 CREATE TABLE posts (
@@ -70,14 +70,27 @@ VALUES ('/gaming', 'A subreddit for (almost) anything related to games - video g
        ('/nba', 'All things NBA basketball'),
        ('/food', 'Cooking, restaurants, recipes, food network, foodies, talk about it here!'),
        ('/rantsandrandom', 'anything you wanna talk about, rants or random stuff is welcome'),
-       ('/championsleagure', 'News, posts, opinions, and facts all about the Champions League or football');
+       ('/championsleague', 'News, posts, opinions, and facts all about the Champions League or football'),
+       ('/music', 'All the music that makes you feel any feelings');
+
+INSERT INTO subscriptions (user_id, sub_id)
+VALUES (1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (1,7), (1,8), (1,9),
+       (2,1), (2,2), (2,3), (2,4), (2,9),
+       (3,2), (3,6), (3,7), (3,9),
+       (4,6), (4,8), (4,9),
+       (5,5), (5,6), (5,7), (5,9),
+       (6,3), (6,6), (6,7),
+       (7,1), (7,5), (7,6), (7,9);      
 
 INSERT INTO posts (user_id, title, body, sub_id)
 VALUES (1, 'My first post', 'I love games', 1),
        (1, 'Thoughts on dororo?', 'its a bit simplistic but I like it a lot because its a breath of fresh air', 3),
        (3, 'clapping syndrome', 'sometimes I ask the waitress to clap once if she can hear my voice, to take my order', 7),
        (2, 'green errthang', 'I can probably drink green smoothies and juices for the rest of eternity', 6),
-       (4, 'Female Messi', 'I would like to just put out there I can take any challenger cause as a youngin I was called Fessi(female messi)',8);
+       (4, 'Female Messi', 'I would like to just put out there I can take any challenger cause as a youngin I was called Fessi(female messi)', 8),
+       (5, 'How do you feel about music today?', 'I think a lot of todays music has become mostly about the beats and less about the lyrical content. I come from an era where lyrics would make or break your records. But I guess that just means father time is catching up to me', 9),
+       (6, 'In todays day in age a senzu bean would be a money maker', 'If i only had the right means to grow a senzu bean I would be able to solve 90% of the worlds problems. Think about it! You probably wouldnt even need coffee or caffeine and everyone would be able to fly hahahaha', 6),
+       (7, 'OMG DID YOU SEE THATH DUNK', 'Thith dunk by Ruhthel Wethbrookh wath tho amathing my goodneth I with you guyth can come sith here courth thide with me!', 5);
 
 INSERT INTO comments(user_id, commented_on, body, post_id, comment_id)
 VALUES (1, 'post', 'OMG thats amazing I never knew that!', 1, null),
@@ -85,7 +98,10 @@ VALUES (1, 'post', 'OMG thats amazing I never knew that!', 1, null),
        (1, 'comment', 'yeah dude lets go', 1, 1),
        (4, 'post', 'yasssss uwu', 2, null),
        (2, 'post', 'nah I dont like it its just not for me meh', 1, null),
-       (7, 'post', 'I thought it was awesome but the ending was so terrible', 2, null);
+       (7, 'post', 'I thought it was awesome but the ending was so terrible', 2, null),
+       (2, 'post', 'what I was disappointed in was how the whole thing ended', 2, null),
+       (4, 'post', 'yeah i saw that dunk too! i was in the nosebleeds though', 8, null),
+       (7, 'comment', 'dude I think even if ith wath the nothebleedth ith crathy', 8, 1);
 
 INSERT INTO voting (user_id, content_type, post_id, sub_id, comment_id, vote)
 VALUES (2, 'post', 1, null, null, -1),
@@ -93,5 +109,16 @@ VALUES (2, 'post', 1, null, null, -1),
        (1, 'post', 4, null, null, 1),
        (2, 'sub', null, 2, null, 1),
        (4, 'sub', null, 2, null, -1),
-       (6, 'post', 1, null, null, 1);
+       (3, 'sub', null, 4, null, 1),
+       (3, 'post', 1, null, null, 1),
+       (2, 'post', 1, null, null, 1),
+       (5, 'post', 4, null, null, 1),
+       (6, 'post', 2, null, null, 1),
+       (7, 'post', 2, null, null, 1),
+       (4, 'post', 4, null, null, 1),
+       (1, 'comment', null, null, 4, 1),
+       (7, 'post', 7, null, null, 1),
+       (2, 'post', 5, null, null, 1),
+       (3, 'comment', null, null, 2, 1),
+       (3, 'sub', null, 3, null, 1);
 

@@ -43,7 +43,7 @@ class CurrentPostLeft extends Component {
                                         <div className='commentCountDiv'>
                                             <svg className='commentSVG' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 1h-24v16.981h4v5.019l7-5.019h13z"/></svg>
                                             <span className='commentCount'>
-                                                { `${comment_count} comments` }
+                                                { `${comment_count ? comment_count : 0} comments` }
                                             </span>
                                         </div>
                                     </div>
