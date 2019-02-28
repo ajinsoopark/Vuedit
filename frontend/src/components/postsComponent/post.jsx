@@ -5,27 +5,26 @@ import TimeAgo from 'react-timeago';
 class Post extends Component {
 
     render () {
+       
         return (
             <div className='post'>
-                <div className='postVoting'>
-                    <div className='votingArea'>
-                        <div className='voteDiv'>
-                            <button className='upvoteButton'>
-                                <div className='upvoteIconDiv'>
+                <div className='votingArea'>
+                    <div className='voteDiv'>
+                        <button className='upvoteButton'>
+                            <div className='upvoteIconDiv'>
                                 <svg xmlns="http://www.w3.org/2000/svg" className='upSVG' viewBox="0 0 24 24"><path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z"/></svg>
-                                </div>
-                            </button>
+                            </div>
+                        </button>
                         <div className='voteSum' >
                             {this.props.voteSum ? this.props.voteSum : 0}
                         </div>
-                            <button className='downvoteButton'>
-                                <div className='downvoteIconDiv'>
+                        <button className='downvoteButton'>
+                            <div className='downvoteIconDiv'>
                                 <svg xmlns="http://www.w3.org/2000/svg" className='downSVG' viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
-                                </div>
-                            </button>
-                        </div>
+                            </div>
+                        </button>
                     </div>
-                </div>
+                    </div>
                 <div className='postContent'>
                     <div className='postTimeUserSub'>
                         <div className='timeUserSub'>

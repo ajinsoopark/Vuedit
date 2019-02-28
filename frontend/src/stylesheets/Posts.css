@@ -28,7 +28,6 @@
     line-height: 20px;
     vertical-align: baseline;
     text-decoration: none;
-    z-index: 3;
 }
 
 .visuals {
@@ -53,7 +52,6 @@
     font: inherit;
     vertical-align: baseline;
     font-size: 12px;
-    z-index: 3;
 }
 
 .authorUsername {
@@ -88,13 +86,11 @@
     position: relative;
     text-decoration: none;
     word-break: break-word;
-    z-index: 3;
 }
 
 .titleLink {
     color: inherit;
     text-decoration: inherit;
-    z-index: 3;
 }
 
 .titleHeader {
@@ -106,7 +102,6 @@
     font-weight: 500;
     line-height: 22px;
     padding-right: 5px;
-    z-index: 3;
 }
 
 .commentsLink {
@@ -121,7 +116,6 @@
     padding: 4px;
     margin-right: 4px;
     text-decoration: inherit;
-    z-index: 3;
 }
 
 .post {
@@ -142,7 +136,6 @@
     border-radius: 4px;
     padding-top: 10px;
     padding-bottom: 10px;
-    z-index: 1;
 }
 
 .postsType {
@@ -184,7 +177,7 @@
     padding-top: 4px;
 }
 
-.postVoting {
+.voteArea {
     width: 40px;
     border-left: 4px solid transparent;
     -webkit-box-align: center;
@@ -203,7 +196,6 @@
     padding: 8px 4px 8px 0;
     position: absolute;
     top: 0;
-    z-index: 3;
 }
 
 .voteDiv {
@@ -222,7 +214,6 @@
     color: inherit;
     cursor: pointer;
     padding: initial;
-    z-index: 3;
 }
 
 .upvoteIconDiv {
@@ -236,23 +227,47 @@
     color: rgb(129, 131, 132);
     border-radius: 2px;
     transition: background-color 0.1s ease 0s;
-    z-index: 3;
 }
 
 .upSVG {
     height: 15px;
     width: 15px;
     padding-right: 3px;
-    z-index: 3;
+}
+
+.votingArea {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    left: 0;
+    padding: 8px 4px 8px 0;
+    position: absolute;
+    width: 40px;
+    border-left: 4px solid transparent;
 }
 
 .voteSum {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    fill: inherit;
+    flex-direction: column;
     color: rgb(215, 218, 220);
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
     pointer-events: none;
     word-break: normal;
+    padding-left: 4px;
 }
 
 .downvoteButton {
@@ -263,7 +278,6 @@
     color: inherit;
     cursor: pointer;
     padding: initial;
-    z-index: 3;
 }
 
 .downvoteIconDiv {
@@ -277,12 +291,10 @@
     color: rgb(129, 131, 132);
     border-radius: 2px;
     transition: background-color 0.1s ease 0s;
-    z-index: 3;
 }
 
 .downSVG {
     height: 15px;
     width: 15px;
     padding-right: 3px;
-    z-index: 3;
 }

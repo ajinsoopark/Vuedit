@@ -6,6 +6,7 @@ import SortContainer from '../../commentsComponent/sortContainer';
 import PostVoteArea from './postVoteArea';
 import PostHeaderInfo from './postHeaderInfo';
 import SignUp from './signUpComponent';
+import '../../../stylesheets/currentPostLeft.css';
 
 class CurrentPostLeft extends Component {
     
