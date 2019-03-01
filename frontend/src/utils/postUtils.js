@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchAllPosts = () => {
-   return axios.get('/posts/postswithinfo');
+   return axios.get('/posts/withinfo');
 }
 
 export const fetchPost = (id) => {

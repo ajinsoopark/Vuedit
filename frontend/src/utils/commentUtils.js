@@ -1,3 +1,5 @@
 import axios from 'axios';
 
-export const 
+export const fetchPostComments = (postId) => {
+    return axios.get(`/comments/posts/${postId}`);
+}

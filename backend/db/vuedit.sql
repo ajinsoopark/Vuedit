@@ -101,7 +101,7 @@ VALUES (1, 'post', 'OMG thats amazing I never knew that!', 1, null),
        (7, 'post', 'I thought it was awesome but the ending was so terrible', 2, null),
        (2, 'post', 'what I was disappointed in was how the whole thing ended', 2, null),
        (4, 'post', 'yeah i saw that dunk too! i was in the nosebleeds though', 8, null),
-       (7, 'comment', 'dude I think even if ith wath the nothebleedth ith crathy', 8, 1);
+       (7, 'comment', 'dude I think even if ith wath the nothebleedth ith crathy', 8, 8);
 
 INSERT INTO voting (user_id, content_type, post_id, sub_id, comment_id, vote)
 VALUES (2, 'post', 1, null, null, -1),
