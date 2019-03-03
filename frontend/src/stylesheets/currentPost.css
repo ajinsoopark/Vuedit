@@ -255,6 +255,7 @@ polygon {
     position: relative;
     width: calc(100% - 160px);
     margin: 48px auto 0px;
+    background-color: black;
 }
 
 .mainRightContainer {

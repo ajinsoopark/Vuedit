@@ -6,6 +6,7 @@ import SortContainer from '../../commentsComponent/sortContainer';
 import PostVoteArea from './postVoteArea';
 import PostHeaderInfo from './postHeaderInfo';
 import SignUp from './signUpComponent';
+import CommentsContainer from '../../commentsComponent/commentsContainer';
 import '../../../stylesheets/currentPostLeft.css';
 
 class CurrentPostLeft extends Component {
@@ -53,6 +54,7 @@ class CurrentPostLeft extends Component {
                     </div>
                     <SignUp />
                     <SortContainer />
+                    <CommentsContainer />
                 </div>
             </div>
         )

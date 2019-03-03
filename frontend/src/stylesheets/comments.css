@@ -1,0 +1,230 @@
+button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.commentSectionContainer {
+    background: rgba(26, 26, 27, 0.8);
+    box-sizing: border-box;
+    padding-right: 16px;
+    margin: 16px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding-bottom: 16px;
+}
+
+.commentSectionDiv {
+    position: relative;
+}
+
+.commentSectionFeedDiv {
+    padding: 0;
+}
+
+.commentDiv {
+    box-sizing: border-box;
+    padding-left: 16px;
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.commentLeftLineDiv {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+}
+
+.leftLineDiv {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.lineIconDiv {
+    bottom: 0px;
+    height: calc(100% - 56px);
+    position: absolute;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    margin-left: 5px;
+    vertical-align: top;
+    width: 16px;
+}
+
+.lineIcon {
+    display: block;
+    height: 100%;
+    width: 50%;
+    border-right: 2px solid rgb(52, 53, 54);
+}
+
+.commentSection {
+    display: flex;
+    margin-left: -8px;
+    position: relative;
+    border-radius: 4px;
+    padding: 8px 4px 0px 0px;
+    transition: color 0.5s ease 0s, fill 0.5s ease 0s, background 1s ease 0s;
+    background: transparent;
+    margin-top: 16px;
+}
+
+.commentVoteArea {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    fill: inherit;
+    flex-direction: column;
+    min-width: 24px;
+    max-height: 40px;
+    text-align: center;
+    z-index: 3;
+    margin: 6px -1px -2px 9px;
+}
+
+.commentVoteButton {
+    height: 20px;
+    width: 24px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.voteIconDiv {
+    padding: 2px;
+    display: inline-block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(129, 131, 132);
+    border-radius: 2px;
+    transition: background-color 0.1s ease 0s;
+}
+
+.commentVoteSVG {
+    height: 16px;
+    width: 16px;
+}
+
+.commentContent {
+    box-sizing: border-box;
+    opacity: 1;
+    margin-left: 4px;
+    padding-left: 4px;
+    padding-top: 4px;
+    max-width: 800px;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    border-radius: 4px;
+}
+
+.commentHeaderDiv {
+    -webkit-box-align: center;
+    align-items: center;
+    line-height: 16px;
+    display: flex;
+    margin-left: 0px;
+    min-height: 18px;
+    transition: opacity 0.2s ease 0s;
+}
+
+.commentUsername {
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.commentUserLink {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(79, 188, 255);
+    text-decoration: inherit;
+}
+
+.commentDotDivider {
+    padding-left: 8px;
+    flex: 0 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+}
+
+.commentCreatedTime {
+    text-decoration: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+    padding-left: 8px;
+    flex: 0 0 auto;
+}
+
+.commentHeaderSpacing {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.commentBodyDiv {
+    padding: 2px 0;
+    width: 100%;
+}
+
+.commentBody {
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(215, 218, 220);
+    word-break: break-word;
+    overflow: auto;
+}
+
+.commentReplyButtonDiv {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+    margin: 4px 0px 8px;
+}
+
+.commentReplyButton {
+    display: inline-block;
+    margin-right: 12px;
+    transition: color 0.1s ease 0s;
+}
+
+.commentSectionFeedDiv .commentSection {
+    margin-left: 1em;
+}
+

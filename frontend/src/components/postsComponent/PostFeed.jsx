@@ -9,7 +9,7 @@ class PostsFeed extends Component {
     }
     
     render () {
-        console.log(this.props)
+        
         if (this.props.posts) {
             const post = this.props.posts.postFeed.map(postObj => {
                 return (

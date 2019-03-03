@@ -9,12 +9,12 @@ import CurrentPostLeftContainer from './currentPostLeftContainer';
 class CurrentPost extends Component {
 
     componentDidMount () {
+        console.log(this.props)
         let postId = parseInt(this.props.match.params.id)
         this.props.fetchPost(postId);
     }
 
     render () {
-        console.log(this.props.posts)
 
         return (
             <div className='currentPostContainer'>
