@@ -11,7 +11,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addPost: post => dispatch(addPost(post)),
         fetchAllPosts: posts => dispatch(fetchAllPosts(posts))
         }
 }

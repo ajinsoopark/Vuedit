@@ -29,10 +29,13 @@
 }
 
 .subSplash {
+    background-image: url('https://www.redditstatic.com/desktop2x/img/banner/banner-small@2x.png');
+    background-repeat: no-repeat;
+    background-position: left center;
     height: 34px;
-    background: rgb(0, 121, 211);
     border-radius: 4px 4px 0px 0px;
     margin: -12px -12px 10px;
+
 }
 
 .subName {
@@ -74,3 +77,54 @@
     display: inline-block;
 }
 
+.subCountDiv {
+    display: flex;
+    margin: 8px 0px;
+}
+
+.subCountArea {
+    flex: 1 1 0%;
+    border-bottom: 1px solid rgb(52, 53, 54);
+}
+
+.subCountP {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.subscribersP {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: inline-block;
+    word-break: break-word;
+    padding-bottom: 5px;
+}
+
+.subscribeButtonDiv {
+    margin-top: 12px;
+}
+
+.subscribeButton {
+    display: block;
+    width: 95%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(215, 218, 220);
+    color: rgb(26, 26, 27);
+    fill: rgb(26, 26, 27);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    border-color: rgb(215, 218, 220);
+}

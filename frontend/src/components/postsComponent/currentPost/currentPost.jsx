@@ -15,7 +15,7 @@ class CurrentPost extends Component {
     }
 
     render () {
-
+        
         return (
             <div className='currentPostContainer'>
                 <CurrentPostHeader
@@ -26,6 +26,8 @@ class CurrentPost extends Component {
                         <div className='main'>
                             <CurrentPostLeftContainer />
                             <CurrentPostRight
+                            subvuedits={ this.props.subvuedits }
+                            fetchSubvuedit={ this.props.fetchSubvuedit }
                             postInfo={ this.props.posts.currentPost }
                             />
                         </div>
