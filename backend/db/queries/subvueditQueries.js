@@ -1,7 +1,7 @@
 const { db } = require('../index');
 
 const getAllSubvuedits = (req, res, next) => {
-    db.any('SELECT * FROM subvuedits')
+    db.any('SELECT id, name AS sub_name, COUNT AS sub_count FROM subvuedits AS s FULL JOIN (SELECT COUNT, sub_id FROM subvuedits AS s JOIN (SELECT count(*), sub_id FROM subscriptions GROUP BY sub_id) AS counts ON counts.sub_id = s.id) AS sub ON sub.sub_id = s.id')
     .then(subvuedits => {
         res.status(200)
         .json({
@@ -22,7 +22,7 @@ const getAllSubvuedits = (req, res, next) => {
 const getSingleSubvuedit = (req, res, next) => {
     let subvueditId = parseInt(req.params.id);
 
-    db.one('SELECT * FROM subvuedits WHERE id=$1', [subvueditId])
+    db.one('SELECT id, name AS sub_name, COUNT AS sub_count FROM subvuedits AS s FULL JOIN (SELECT COUNT, sub_id FROM subvuedits AS s JOIN (SELECT count(*), sub_id FROM subscriptions GROUP BY sub_id) AS counts ON counts.sub_id = s.id) AS sub ON sub.sub_id = s.id WHERE id=$1', [subvueditId])
     .then(subvuedit => {
         res.status(200)
         .json({
