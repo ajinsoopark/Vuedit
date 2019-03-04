@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TimeAgo from 'react-timeago';
 import { Link } from 'react-router-dom';
 
-const CommentSection = ({ comment }) => {
-    console.log(comment)
-
+const CommentSection = ({ comment }) => {   
     let nestedComments;
     if (comment) {
         nestedComments = comment.children.map(childComment => {
-            return <CommentSection comment={childComment}/>
+
+            return <CommentSection  key={childComment.id} comment={childComment}/>
         })
     }
 
     return (
-        <>
+        <ul>
+        <li>
         <div className='commentSection'>
             <div className='commentVoteArea'>
                 <button className='commentVoteButton'>
@@ -56,7 +56,8 @@ const CommentSection = ({ comment }) => {
             </div>
         </div>
         {nestedComments}
-        </>
+        </li>
+        </ul>
     )
 }
 

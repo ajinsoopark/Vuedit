@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 import '../../../stylesheets/currentPost.css';
 import CurrentPostHeader from './currentPostHeader';
 import CurrentPostLeftContainer from './currentPostLeftContainer';
+import CurrentPostRight from './currentPostRight';
 
 class CurrentPost extends Component {
 
     componentDidMount () {
-        console.log(this.props)
         let postId = parseInt(this.props.match.params.id)
         this.props.fetchPost(postId);
     }
@@ -25,8 +25,9 @@ class CurrentPost extends Component {
                     <div className='mainContainer'>
                         <div className='main'>
                             <CurrentPostLeftContainer />
-                            <div className='mainRightContainer'>
-                            </div>
+                            <CurrentPostRight
+                            postInfo={ this.props.posts.currentPost }
+                            />
                         </div>
                     </div>
                 </div>

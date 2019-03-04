@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import CurrentPostSplash from './currentPostSplash';
 import SortContainer from '../../commentsComponent/sortContainer';
@@ -12,7 +12,7 @@ import '../../../stylesheets/currentPostLeft.css';
 class CurrentPostLeft extends Component {
     
     render () {
-        const { id, comment_count, body, title } = this.props.posts.currentPost ? this.props.posts.currentPost : '';
+        const { comment_count, body, title } = this.props.posts.currentPost ? this.props.posts.currentPost : '';
 
         return (
             <div className='mainLeftContainer'>

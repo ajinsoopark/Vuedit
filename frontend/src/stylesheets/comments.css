@@ -224,7 +224,11 @@ button {
     transition: color 0.1s ease 0s;
 }
 
-.commentSectionFeedDiv .commentSection {
-    margin-left: 1em;
+ul, li {
+    list-style: none;
+    margin-left: 2%;
 }
 
+ul.commentSection li {
+    margin-left: 2em;
+}
