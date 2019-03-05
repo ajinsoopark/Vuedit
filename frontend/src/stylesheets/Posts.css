@@ -20,7 +20,7 @@
     margin-right: 4px;
 }
 
-.subvuedit {
+.subvueditPostLink {
     font-size: 12px;
     font-weight: 700;
     color: rgb(215, 218, 220);
@@ -28,6 +28,10 @@
     line-height: 20px;
     vertical-align: baseline;
     text-decoration: none;
+}
+
+.subvueditPostLink:hover {
+    text-decoration: underline;
 }
 
 .visuals {
@@ -66,6 +70,10 @@
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+}
+
+.authorUsername:hover {
+    text-decoration: underline;
 }
 
 .timeCreated {
@@ -118,6 +126,11 @@
     text-decoration: inherit;
 }
 
+.commentsLink:hover {
+    background-color: #2D2D2E;
+    transition: backround-color 0.2s ease 0s;
+}
+
 .post {
     display: block;
     position: relative;
@@ -136,6 +149,11 @@
     border-radius: 4px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.post:hover {
+    border-color: #818384;
+    transition: border-color 0.2 ease 0s;
 }
 
 .postsType {

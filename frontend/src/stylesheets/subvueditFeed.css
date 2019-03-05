@@ -84,3 +84,173 @@
     line-height: 38px;
     flex: 1 1 100%;
 }
+
+h1 {
+    display: inline;
+}
+
+.subSplashStyleDiv {
+    width: 512px;
+    height: 48px;
+    background-size: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -8px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.contentTypeContainer {
+    position: static;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    background: rgb(3, 3, 3);
+}
+
+.contentTypeDiv {
+    max-width: 1200px;
+    padding: 0px 16px;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-width: 260px;
+    margin: 0px auto;
+}
+
+.contentTypeLink {
+    margin-left: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 32px;
+    color: rgb(233, 245, 253);
+    display: inline-block;
+    padding-bottom: 1px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 3px solid rgb(233, 245, 253);
+    margin: 0px 5px;
+    text-decoration: inherit;
+}
+
+.subvueditContentDiv {
+    max-width: 100%;
+    padding: 20px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    margin: 0px auto;
+}
+
+.viewAndSortSub {
+    display: flex;
+    flex-direction: row;
+    background: rgb(26, 26, 27);
+    justify-content: left;
+    max-width: 1248px;
+    height: 40px;
+    padding-left: 130px;
+}
+
+.subvueditContentDiv {
+    max-width: 100%;
+    padding: 20px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    margin: 0px auto;
+}
+
+.subLeftFeed {
+    width: 648px;
+    min-width: 0px;
+}
+
+.leftFeedSplash {
+    background-color: rgb(3, 46, 94);
+    background-size: contain;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    background-image: url('https://www.redditstatic.com/desktop2x/img/banner/banner-small@2x.png');
+    display: flex;
+    margin-bottom: 8px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    background-position: left center;
+    padding: 16px 32px 16px 8px;
+}
+
+.closeSplashButton {
+    height: 12px;
+    width: 12px;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.closeSplashSVG {
+    fill: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.redditSplashSVG {
+    margin: 0px 8px;
+    height: 32px;
+    width: 32px;
+}
+
+.redditSplashH1 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: initial;
+    margin-right: 16px;
+}
+
+.splashGetStarted {
+    margin: 0px 0px 0px auto;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    fill: rgb(26, 26, 27);
+    background-color: rgb(0, 121, 211);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    max-height: 32px;
+    white-space: nowrap;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 3px 16px;
+    border-color: rgb(0, 121, 211);
+}
+
+.splashGetStarted:hover {
+    background-color: #6099CF;
+    transition: background 0.2s ease 0s;
+    outline: none;
+}

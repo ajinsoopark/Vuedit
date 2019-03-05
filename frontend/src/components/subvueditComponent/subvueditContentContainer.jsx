@@ -1,7 +1,6 @@
-import SubvueditFeed from './subvueditFeed';
 import { connect } from 'react-redux';
 import { fetchSubvueditPosts } from '../../actions/postActions';
-import { fetchSubvuedit } from '../../actions/subvueditActions';
+import SubvueditContent from './subvueditContent';
 
 const mapStateToProps = state => {
     return {
@@ -12,12 +11,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchSubvueditPosts: posts => dispatch(fetchSubvueditPosts(posts)),
-        fetchSubvuedit: sub => dispatch(fetchSubvuedit(sub))
+        fetchSubvueditPosts: posts => dispatch(fetchSubvueditPosts(posts))
     }
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SubvueditFeed);
+)(SubvueditContent);

@@ -33,7 +33,7 @@ class Post extends Component {
                                 <img alt='' className='linkIcon' src='https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png'>
                                 </img>
                             </Link>
-                            <Link className='subvuedit' to={ `/subvuedits/${this.props.sub_id}` }>
+                            <Link className='subvueditPostLink' to={ `/subvuedits/${this.props.sub_id}` }>
                                  { `v${this.props.subvuedit}` }
                             </Link>
                             <span className="visuals">•</span>

@@ -8,7 +8,7 @@ import '../../stylesheets/homeFeed.css';
 const Home = () => {
     return (
         <div className='homePage'>
-            <FilterContainer />
+            <FilterContainer class={'viewAndSort'}/>
             <div className='homeFeed'>
                 <PostContainer />
                 <MiscContainer />

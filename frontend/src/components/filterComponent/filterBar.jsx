@@ -3,9 +3,10 @@ import SortOptions from './sortOptions';
 import ViewOptions from './viewOptions';
 import '../../stylesheets/Filter.css';
 
-const FilterBar = () => {
+const FilterBar = ({...props}) => {
+
     return (
-        <div className='viewAndSort'>
+        <div className={props.class}>
             <ViewOptions />
             <div className="filterDivider"></div>
             <SortOptions />
