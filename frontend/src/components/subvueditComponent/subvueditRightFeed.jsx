@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Advertisement from '../miscFeedComponent/advertisement';
 
 const SubvueditRightFeed = ({subInfo}) => {
-    const { sub_name, sub_count } = subInfo.currentSubvuedit ? subInfo.currentSubvuedit : '';
+    const { sub_name, sub_count, descriptions } = subInfo.currentSubvuedit ? subInfo.currentSubvuedit : '';
 
     return (
         <div className='rightFeed'>
@@ -24,11 +25,14 @@ const SubvueditRightFeed = ({subInfo}) => {
                                 <p className='subP'>Subscribers</p>
                             </div>
                         </div>
-                        <p className='subDetDet'>{}</p>
+                        <p className='subDetDet'>{descriptions}</p>
                         <div className='subDetSubCreate'>
+                            <Link className='subSubLink' to={''}>Subscribe</Link>
+                            <Link className='subCreateLink' to={''}>Create Post</Link>
                         </div>
                     </div>
                 </div>
+                <Advertisement subPage={true}/>
             </div>
         </div>
     )

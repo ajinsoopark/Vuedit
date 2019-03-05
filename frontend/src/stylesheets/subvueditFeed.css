@@ -364,9 +364,72 @@ h1 {
 
 .subDetDet {
     font-family: "Noto Sans", Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 300;
     line-height: 21px;
     margin-top: 8px;
     overflow-wrap: break-word;
+}
+
+.subDetSubCreate {
+    margin-top: 1em;   
+}
+
+.subSubLink {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    background-color: rgb(215, 218, 220);
+    color: rgb(26, 26, 27);
+    fill: rgb(26, 26, 27);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    border-color: rgb(215, 218, 220);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.subCreateLink {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    text-align: center;
+    border-color: rgb(215, 218, 220);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: rgb(215, 218, 220);
+    color: rgb(26, 26, 27);
+    fill: rgb(26, 26, 27);
+}
+
+.adImage {
+    max-width: 23vw;
+    max-height: 60vh;
+}
+
+.adContainer {
+    margin-top: 1em;
+}
+
+.adImgDiv {
+    display: flex;
+    justify-content: center;
 }

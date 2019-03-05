@@ -124,6 +124,22 @@ button {
     width: 16px;
 }
 
+.upSVG:hover {
+    fill:#5B75CC;
+}
+
+.upSVG:focus-within {
+    fill:#5B75CC;
+}
+
+.downSVG:hover {
+    fill: #CC3701;
+}
+
+.downSVG:focus {
+    fill: #CC3701;
+}
+
 .commentContent {
     box-sizing: border-box;
     opacity: 1;
@@ -160,6 +176,10 @@ button {
     line-height: 16px;
     color: rgb(79, 188, 255);
     text-decoration: inherit;
+}
+
+.commentUserLink:hover {
+    text-decoration: underline;
 }
 
 .commentDotDivider {
@@ -229,3 +249,6 @@ ul, li {
     margin-left: 2%;
 }
 
+.commentReplyButton:hover {
+    text-decoration: underline;
+}

@@ -417,3 +417,12 @@
     border-color: rgb(215, 218, 220);
     padding: 4px 9px 2px;
 }
+
+.subLink:hover {
+    text-decoration: underline;
+}
+
+.userNameLink:hover {
+    text-decoration: underline;
+}
+

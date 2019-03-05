@@ -14,8 +14,8 @@ class CurrentPostRight extends Component {
     
     render () {
         const { sub_name, sub_description } = this.props.postInfo ? this.props.postInfo : '';
-        const { sub_count } = this.props.subvuedits.currentSubvuedit ? this.props.subvuedits.currentSubvuedit : '';
-        console.log(this.props)
+        const { sub_count, id } = this.props.subvuedits.currentSubvuedit ? this.props.subvuedits.currentSubvuedit : '';
+        
         return (
             <div className='postRightContainer'>
                 <div className='rightFeedDiv'>
@@ -24,7 +24,7 @@ class CurrentPostRight extends Component {
                             <div className='subSplash'></div>
                             <div className='subName'>
                                 <img className='subIcon' alt='' src="https://styles.redditmedia.com/t5_2szyo/styles/communityIcon_z7dkyeif8kzz.png"/>
-                                <Link className='subLink' to={ '' }>
+                                <Link className='subLink' to={ `/subvuedits/${id}` }>
                                     <span className='subSpan'>  
                                         { `v${sub_name}` }
                                     </span>
@@ -48,9 +48,9 @@ class CurrentPostRight extends Component {
                                     Subscribe
                                 </button>
                             </div>
-                            <Advertisement feed={'postAd'}/>
                         </div>
                     </div>
+                    <Advertisement feed={'postAd'}/>
                 </div>
             </div>
         )
