@@ -9,9 +9,10 @@ const userReducer = (state = initialState, action) => {
         case ADD_USER: {
             return newState = newState.concat(action.payload)
         }
-    }
-    
-    return newState;
+        default: {
+            return newState
+        }
+    } 
 }
 
 export default userReducer;

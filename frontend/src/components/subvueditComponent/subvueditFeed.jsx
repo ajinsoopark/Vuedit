@@ -5,6 +5,7 @@ import SubvueditHeader from './subvueditHeader';
 import FilterContainer from '../filterComponent/filterContainer';
 import SubvueditContent from './subvueditContent';
 
+
 class SubvueditFeed extends Component {
 
     componentDidMount () {
@@ -15,9 +16,9 @@ class SubvueditFeed extends Component {
 
     render () {
         const { sub_name } = this.props.posts.subvueditPosts.length ? this.props.posts.subvueditPosts[0] : ''
-        console.log(this.props)
+
         return (
-            <div className='subvueditContainer'>
+            <div className='subvueditContainerOuter'>
                 <div className='subvueditDivContainer'>
                     <div className='subvuedit'>
                         <SubvueditHeader 
@@ -27,7 +28,7 @@ class SubvueditFeed extends Component {
                         <SubvueditContent 
                         posts={this.props.posts.subvueditPosts}
                         subInfo={this.props.subvuedits}
-                        />
+                        />     
                     </div>
                 </div>
             </div>

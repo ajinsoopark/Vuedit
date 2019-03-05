@@ -22,31 +22,31 @@ const postReducer = (state = initialState, action) => {
                 newState.postFeed = [...newState.postFeed, ...action.payload]
                 newState.changesMade = false
                 return newState
-                break;
             }
+            break;
         }
         case REPLACE_POSTS: {
             if (newState.changesMade) {
                 newState.postFeed = [...action.payload]
                 newState.changesMade = false
                 return newState
-                break;
             }
+            break;
         }
         case CURRENT_POST: {
             newState.currentPost = action.payload
             return newState
-            break;
         }
         case SUBVUEDIT_POSTS: {
             newState.subvueditPosts = action.payload
             return newState
-            break;
         }
         case USERS_POSTS: {
             newState.usersPosts = action.payload
             return newState
-            break;
+        }
+        default: {
+            return newState;
         }
     }
     

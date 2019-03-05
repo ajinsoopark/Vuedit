@@ -17,21 +17,23 @@ switch (action.type) {
             newState.subvueditList = [...newState.subvueditList, ...action.payload]
             newState.changesMade = false
             return newState
-            break;
         }
+        break;
     }
     case SUBVUEDITS: {
         if (newState.changesMade) {
             newState.subvueditList = [...action.payload]
             newState.changesMade = false
             return newState
-            break;
         }
+        break;
     }
     case CURRENT_SUBVUEDIT: {
         newState.currentSubvuedit = action.payload
         return newState
-        break;
+    }
+    default: {
+        return newState;
     }
 }
 

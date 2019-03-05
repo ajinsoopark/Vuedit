@@ -15,7 +15,7 @@ class CurrentPostRight extends Component {
     render () {
         const { sub_name, sub_description } = this.props.postInfo ? this.props.postInfo : '';
         const { sub_count } = this.props.subvuedits.currentSubvuedit ? this.props.subvuedits.currentSubvuedit : '';
-
+        console.log(this.props)
         return (
             <div className='postRightContainer'>
                 <div className='rightFeedDiv'>

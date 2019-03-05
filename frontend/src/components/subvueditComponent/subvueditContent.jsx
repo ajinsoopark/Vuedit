@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import SubvueditPostFeed from './subvueditPostFeed';
+import SubvueditRightFeed from './subvueditRightFeed';
+
 class SubvueditContent extends Component {
     
     render () {
@@ -26,8 +29,9 @@ class SubvueditContent extends Component {
                             Get started
                         </Link>
                     </div>
-                    <SubvueditPostFeed />
+                    <SubvueditPostFeed posts={this.props.posts}/>
                 </div>
+                    <SubvueditRightFeed subInfo={this.props.subInfo}/>
             </div>
         )
     }

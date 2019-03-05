@@ -15,6 +15,10 @@ const commentReducer = (state = initialState, action) => {
                 newState.currentComments = action.payload;
                 return newState
             }
+            break;
+        }
+        default: {
+            return newState
         }
     }
     

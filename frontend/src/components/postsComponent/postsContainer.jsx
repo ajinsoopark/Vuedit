@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addPost, fetchAllPosts } from '../../actions/postActions';
+import { fetchAllPosts } from '../../actions/postActions';
 
 import PostsFeed from './PostFeed';
 
