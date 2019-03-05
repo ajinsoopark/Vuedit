@@ -1,12 +1,16 @@
 import { 
         ADD_POST,
         CURRENT_POST,
-        REPLACE_POSTS } from '../actions/postActions';
+        REPLACE_POSTS,
+        SUBVUEDIT_POSTS,
+        USERS_POSTS } from '../actions/postActions';
 
 const initialState = {
     changesMade: true,
     currentPost: null,
-    postFeed: []
+    postFeed: [],
+    subvueditPosts: [],
+    usersPosts: null
 };
 
 const postReducer = (state = initialState, action) => {
@@ -31,6 +35,16 @@ const postReducer = (state = initialState, action) => {
         }
         case CURRENT_POST: {
             newState.currentPost = action.payload
+            return newState
+            break;
+        }
+        case SUBVUEDIT_POSTS: {
+            newState.subvueditPosts = action.payload
+            return newState
+            break;
+        }
+        case USERS_POSTS: {
+            newState.usersPosts = action.payload
             return newState
             break;
         }

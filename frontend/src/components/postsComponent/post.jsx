@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import TimeAgo from 'react-timeago';
+// import { withRouter } from 'reac'
 
 class Post extends Component {
 
@@ -28,11 +29,11 @@ class Post extends Component {
                 <div className='postContent'>
                     <div className='postTimeUserSub'>
                         <div className='timeUserSub'>
-                            <Link className='subvueditLink' to={ '' }>
+                            <Link className='subvueditLink' to={ `/subvuedits/${this.props.sub_id}` }>
                                 <img alt='' className='linkIcon' src='https://b.thumbs.redditmedia.com/VZX_KQLnI1DPhlEZ07bIcLzwR1Win808RIt7zm49VIQ.png'>
                                 </img>
                             </Link>
-                            <Link className='subvuedit' to={ '' }>
+                            <Link className='subvuedit' to={ `/subvuedits/${this.props.sub_id}` }>
                                  { `v${this.props.subvuedit}` }
                             </Link>
                             <span className="visuals">•</span>

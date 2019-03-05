@@ -9,7 +9,7 @@ class PostsFeed extends Component {
     }
     
     render () {
-         console.log(this.props.posts)
+         
         if (this.props.posts.postFeed) {
             const post = this.props.posts.postFeed.map(postObj => {
                 return (
@@ -23,6 +23,7 @@ class PostsFeed extends Component {
                     subvuedit={ postObj.sub_name }
                     voteSum={ postObj.vote_sum }
                     commentCount={ postObj.comment_count }
+                    sub_id={ postObj.sub_id }
                     />
                 )
             });

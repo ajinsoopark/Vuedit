@@ -36,7 +36,7 @@ const getSinglePost = (req, res, next) => {
 const getSubvueditPosts = (req, res, next) => {
     let subvueditId = parseInt(req.params.id);
 
-    db.any('SELECT * FROM posts WHERE sub_id=$1', [subvueditId])
+    db.any('SELECT p.id, title, body, p.created_at, username, sub_id, name AS sub_name, descriptions AS sub_description, SUM AS vote_sum, COUNT AS comment_count FROM posts AS p INNER JOIN users AS u ON p.user_id = u.id INNER JOIN subvuedits AS s ON p.sub_id = s.id LEFT JOIN (SELECT COUNT, post_id FROM posts JOIN (SELECT count(*), post_id FROM comments GROUP BY post_id) AS counts ON counts.post_id = posts.id) AS c ON c.post_id = p.id LEFT JOIN (SELECT post_id, SUM FROM posts JOIN (SELECT post_id, SUM(vote) FROM voting GROUP BY post_id) AS votesum ON votesum.post_id = posts.id) AS v ON v.post_id = p.id WHERE p.sub_id=$1 ORDER BY p.id', [subvueditId])
     .then(subPosts => {
         res.status(200)
         .json({
@@ -76,7 +76,7 @@ const getUsersPosts = (req, res, next) => {
 };
 
 const getPostsWithAllInfo = (req, res, next) => {
-    db.any('SELECT p.id, title, body, p.created_at, username, name AS sub_name, descriptions AS sub_description, SUM AS vote_sum, COUNT AS comment_count FROM posts AS p INNER JOIN users AS u ON p.user_id = u.id INNER JOIN subvuedits AS s ON p.sub_id = s.id LEFT JOIN (SELECT COUNT, post_id FROM posts JOIN (SELECT count(*), post_id FROM comments GROUP BY post_id) AS counts ON counts.post_id = posts.id) AS c ON c.post_id = p.id LEFT JOIN (SELECT post_id, SUM FROM posts JOIN (SELECT post_id, SUM(vote) FROM voting GROUP BY post_id) AS votesum ON votesum.post_id = posts.id) AS v ON v.post_id = p.id ORDER BY p.id')
+    db.any('SELECT p.id, title, body, p.created_at, username, sub_id, name AS sub_name, descriptions AS sub_description, SUM AS vote_sum, COUNT AS comment_count FROM posts AS p INNER JOIN users AS u ON p.user_id = u.id INNER JOIN subvuedits AS s ON p.sub_id = s.id LEFT JOIN (SELECT COUNT, post_id FROM posts JOIN (SELECT count(*), post_id FROM comments GROUP BY post_id) AS counts ON counts.post_id = posts.id) AS c ON c.post_id = p.id LEFT JOIN (SELECT post_id, SUM FROM posts JOIN (SELECT post_id, SUM(vote) FROM voting GROUP BY post_id) AS votesum ON votesum.post_id = posts.id) AS v ON v.post_id = p.id ORDER BY p.id')
     .then(posts => {
         res.status(200)
         .json({

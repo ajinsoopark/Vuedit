@@ -7,3 +7,7 @@ export const fetchAllPosts = () => {
 export const fetchPost = (id) => {
     return axios.get(`/posts/${id}`);
 }
+
+export const fetchSubvueditPosts = (subId) => {
+    return axios.get(`/posts/subvuedits/${subId}`);
+}

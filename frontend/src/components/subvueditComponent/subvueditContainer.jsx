@@ -1,5 +1,6 @@
 import SubvueditFeed from './subvueditFeed';
 import { connect } from 'react-redux';
+import { fetchSubvueditPosts } from '../../actions/postActions';
 
 const mapStateToProps = state => {
     return {
@@ -10,7 +11,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        
+        fetchSubvueditPosts: posts => dispatch(fetchSubvueditPosts(posts))
     }
 };
 

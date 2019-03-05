@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.subvueditContainer {
+    background-color: rgb(26, 26, 27);
+    min-height: calc(100vh - 48px);
+    padding-top: 48px;
+}
+
+.subvueditDivContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 48px);
+}
+
+.subvuedit {
+    z-index: 3;
+}
+
+.subvueditHeader {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgb(26, 26, 27);
+    flex: 0 0 auto;
+    padding: 0px;
+}
+
+.subvueditHeaderLink {
+    padding: 8px 16px;
+    display: block;
+    flex-direction: row;
+    height: 64px;
+    min-width: 260px;
+    background: url('https://styles.redditmedia.com/t5_2s30g/styles/bannerBackgroundImage_zjbes4zarmd01.png') center top / cover no-repeat rgb(137, 137, 137);
+    background-position: center top;
+    margin: 0px auto;
+    text-decoration: none;
+}
+
+.subvueditSplash {
+    max-width: 1200px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.subvueditNameDiv {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 40;
+}
+
+.subSplashIcon {
+    float: left;
+    margin-right: 8px;
+    box-sizing: border-box;
+    height: 36px;
+    width: 36px;
+    background: url('https://styles.redditmedia.com/t5_2s30g/styles/communityIcon_7wkagvae7jd01.png') center center / 100% no-repeat rgb(0, 121, 211);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+    border-radius: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.subSplashSpan {
+    padding-right: 16px;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(252, 252, 251);
+    display: block;
+    float: left;
+    line-height: 38px;
+    flex: 1 1 100%;
+}
