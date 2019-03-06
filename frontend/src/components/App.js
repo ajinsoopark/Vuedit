@@ -3,11 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 import NavBarContainer from './NavBar/navBarContainer';
-import HomeContainer from './home/homeContainer';
-import CurrentPostContainer from './postsComponent/currentPost/currentPostContainer';
-import SubvueditContainer from './subvueditComponent/subvueditContainer';
+import HomeContainer from './Home/homeContainer';
+import CurrentPostContainer from './Posts/currentPost/currentPostContainer';
+import SubvueditContainer from './Subvuedits/subvueditContainer';
+import UserProfileContainer from './Users/userProfileContainer';
 
 class App extends Component {
+  
   render() {
     return (
       <React.Fragment>
@@ -16,6 +18,7 @@ class App extends Component {
           <Route exact path='/' component={ HomeContainer } />
           <Route path='/posts/:id' component={ CurrentPostContainer }/>
           <Route path='/subvuedits/:id' component={ SubvueditContainer }/>
+          <Route path='/user/:id' component={ UserProfileContainer }/>
         </Switch>
       </React.Fragment>
     );

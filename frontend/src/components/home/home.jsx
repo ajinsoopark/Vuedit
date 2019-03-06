@@ -1,7 +1,7 @@
 import React from 'react';
-import PostContainer from '../postsComponent/postsContainer';
-import MiscContainer from '../miscFeedComponent/miscContainer';
-import FilterContainer from '../filterComponent/filterContainer';
+import PostContainer from '../Posts/postsContainer';
+import MiscContainer from '../MiscFeed/miscContainer';
+import FilterContainer from '../Filter/filterContainer';
 
 import '../../stylesheets/homeFeed.css';
 

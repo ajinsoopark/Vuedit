@@ -266,3 +266,140 @@ polygon {
     margin: 32px 32px 32px 0px;
     padding: 0px;
 }
+
+
+.postRightContainer {
+    display: block;
+    right: 0px;
+    top: 0px;
+    width: 312px;
+    margin: 32px 32px 32px 0px;
+    padding: 0px;
+}
+
+.rightFeedDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    top: 0px;
+    width: 312px;
+}
+
+.subvueditContainer {
+    overflow-wrap: break-word;
+    background-color: rgb(26, 26, 27);
+    color: rgb(215, 218, 220);
+    fill: rgb(215, 218, 220);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+}
+
+.subvueditDiv {
+    padding: 12px;
+}
+
+.subSplash {
+    background-image: url('https://www.redditstatic.com/desktop2x/img/banner/banner-small@2x.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    height: 34px;
+    border-radius: 4px 4px 0px 0px;
+    margin: -12px -12px 10px;
+
+}
+
+.subName {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.subIcon {
+    border-radius: 24px;
+    box-sizing: border-box;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    margin-right: 8px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.subLink {
+    text-overflow: ellipsis;
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.subSpan {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.subCountDiv {
+    display: flex;
+    margin: 8px 0px;
+}
+
+.subCountArea {
+    flex: 1 1 0%;
+    border-bottom: 1px solid rgb(52, 53, 54);
+}
+
+.subCountP {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.subscribersP {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: inline-block;
+    word-break: break-word;
+    padding-bottom: 5px;
+}
+
+.subscribeButtonDiv {
+    margin-top: 12px;
+}
+
+.subscribeButton {
+    display: block;
+    width: 95%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 32px;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgb(215, 218, 220);
+    color: rgb(26, 26, 27);
+    fill: rgb(26, 26, 27);
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 4px;
+    text-decoration: none;
+    border-color: rgb(215, 218, 220);
+}
+
+.subscribeButton:hover {
+    background: #DFE1E3;
+    transition: background 0.2s ease 0s;
+}

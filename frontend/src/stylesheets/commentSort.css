@@ -9,6 +9,8 @@
     border-bottom: 1px solid rgb(52, 53, 54);
     margin: 16px 40px 0px;
     padding: 0px 16px 4px 0px;
+    padding-bottom: 1em;
+    padding-top: 2em;
 }
 
 .sortBy {
@@ -21,94 +23,6 @@
     cursor: pointer;
 }
 
-.currentSort {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    line-height: 24px;
-    text-transform: uppercase;
-    background-color: inherit;
-    border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 4px;
-    padding: 0 4px 1px;
-    width: auto!important;
-    color: rgb(79, 188, 255);
-    fill: rgb(129, 131, 132);
-    white-space: nowrap;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: row;
-    text-align: left;
-    width: 100%;
-}
-
-.currentSortOption {
-    display: inline-block;
-}
-
-.sortArrow {
-    overflow: hidden;
-    display: inline-block;
-    height: 20px;
-    margin-left: 2px;
-    width: 20px;
-    vertical-align: middle;
-    fill: rgb(79, 188, 255);
-    cursor: pointer;
-    margin: 0;
-    height: 10px;
-    width: 6px;
-    padding-right: 15px;
-}
-
-g {
-    transform-origin: 0px 0px;
-}
-
-.commentSortMenu {
-    /* box-shadow: rgba(215, 218, 220, 0.2) 0px 2px 4px 0px; */
-    color: rgb(215, 218, 220);
-    margin-top: 8px;
-    position: relative;
-    display: inline-flex;
-    z-index: 80;
-    background-color: rgb(26, 26, 27);
-    /* border-radius: 4px; */
-    overflow: hidden;
-    margin-bottom: 20px;
-    visibility: hidden;
-}
-
-.optionLink {
-    fill: currentcolor;
-    color: inherit;
-    text-decoration: none;
-}
-
-.optionButton {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 18px;
-    color: rgb(129, 131, 132);
-    fill: rgb(129, 131, 132);
-    background-color: rgb(26, 26, 27);
-    display: block;
-    text-transform: capitalize;
-    white-space: nowrap;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(52, 53, 54);
-    border-image: initial;
-    padding: 8px;
-}
-
-.optionSpan {
-    display: inline-block;
-}
-
-.bestOptionButton {
-    margin-left: 0;
+.commentSortMenuContainer {
+    padding-left: 1em;
 }

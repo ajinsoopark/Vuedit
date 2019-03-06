@@ -128,3 +128,8 @@
     text-decoration: none;
     border-color: rgb(215, 218, 220);
 }
+
+.subscribeButton:hover {
+    background: #DFE1E3;
+    transition: background 0.2s ease 0s;
+}

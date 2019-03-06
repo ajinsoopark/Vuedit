@@ -147,7 +147,7 @@
     line-height: 16px;
     pointer-events: none;
     word-break: normal;
-    padding-left: 4px;
+    padding-left: 2px;
 }
 
 .postHeaderInfo {
@@ -426,3 +426,7 @@
     text-decoration: underline;
 }
 
+.signUpLink:hover {
+    background-color: #DFE1E3;
+    transition: background 0.1s ease 0s;
+}
