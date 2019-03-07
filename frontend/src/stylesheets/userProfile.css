@@ -207,7 +207,13 @@ button {
     overflow: visible;
 }
 
+.userCommentContainer:hover {
+    border-color: #818384;
+    transition: border-color 0.2 ease 0s;
+}
+
 .userCommentHeader {
+    /* display: flex; */
     padding-bottom: 1px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -230,6 +236,11 @@ button {
 .userCommentHeaderContent {
     display: flex;
     padding: 8px 0px;
+}
+
+.userCommentHeaderContent:hover {
+    border-color: #818384;
+    transition: border-color 0.2s ease 0s;
 }
 
 .closeSVG:hover {
@@ -266,22 +277,32 @@ button {
     color: rgb(215, 218, 220);
     text-decoration: none;
     cursor: pointer;
+    padding-right: .6em;
+}
+
+.userProfileLink:hover {
+    text-decoration: underline;
 }
 
 .userCommentedPost {
     display: inline;
+    position: relative;
+    text-decoration: none;
+    word-break: break-word;
+
 }
 
 .dotDividerSpan {
     margin: 0 4px;
     color: rgb(129, 131, 132);
-    font-size: 6px;
+    font-size: 9px;
     line-height: 16px;
     vertical-align: middle;
 }
 
 .userCommentSub {
     display: inline;
+    flex: 0 0 auto;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
@@ -289,4 +310,241 @@ button {
     -ms-flex-align: center;
     align-items: center;
     color: inherit;
+}
+
+.commentedPostLink {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.commentedPostLink:hover {
+    text-decoration: underline;
+}
+
+.postH2 {
+    color: rgb(111, 112, 113);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    display: inline;
+    color: rgb(215, 218, 220);
+    overflow-wrap: break-word;
+    padding-right: 0.5em;
+    padding-left: 0.6em;
+}
+
+.userCommentSub:hover {
+    text-decoration: underline;
+}
+
+.commentSubLink {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(215, 218, 220);
+    display: inline;
+    line-height: 20px;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.commentSubLink:hover {
+    text-decoration: underline;
+}
+
+.userCommentContentContainer {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: rgb(26, 26, 27);
+    padding-top: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-bottom: 0px;
+    border-width: 0px 1px 1px;
+    border-style: solid;
+    border-color: rgb(52, 53, 54);
+    border-image: initial;
+    overflow: hidden;
+}
+
+.userCommentTime {
+    display: inline;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+    padding-left: 8px;
+    flex: 0 0 auto;
+}
+
+.userCommentBody {
+    padding-top: 1px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-bottom: 0px;
+    border-width: 0px 1px 1px;
+    border-style: solid;
+    border-color: rgb(52, 53, 54);
+    border-image: initial;
+    display: flex;
+    align-items: stretch;
+    padding: 8px 0px 8px 8px;
+    border-top: 2px solid rgb(52, 53, 54);
+    width: 98.4%;
+}
+
+.commentBodySpacer {
+    margin-right: 16px;
+    border-left: 2px dashed rgb(52, 53, 54);
+    flex: 0 0 1px;
+}
+
+.userCommentDiv {
+    margin-bottom: 0px;
+    flex: 1 1 auto;
+    fill: rgb(129, 131, 132);
+    background: rgba(215, 218, 220, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: none;
+}
+
+.userCommentNameHeader{
+    height: 16px;
+    margin-left: 0;
+    align-items: center;
+    line-height: 16px;
+    display: flex;
+    transition: opacity 0.2s ease 0s;
+}
+
+.userComment {
+    align-items: center;
+    display: flex;
+    transition: opacity 0.2s ease 0s;
+    padding: 0.25em 0px;
+    width: 100%;
+    font-family: "Noto Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(215, 218, 220);
+    word-break: break-word;
+    overflow: auto;
+    padding-left: 1em;
+}
+
+.userCommentName {
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.userCommentHeader:hover {
+    border-color: #818384;
+    transition: border-color 0.2 ease 0s;
+}
+
+.commenterNameLink {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(79, 188, 255);
+    text-decoration: none;
+}
+
+.commenterNameLink:hover {
+    text-decoration: underline;
+}
+
+.userCommentBody:hover {
+    border-color: #818384;
+    transition: border-color 0.2 ease 0s;
+}
+
+.userCommentReplyDiv {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(129, 131, 132);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    padding-left: 1em;
+}
+
+.userReplyButton {
+    display: inline-block;
+    margin: 4px;
+    transition: color 0.1s ease 0s;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: initial;
+}
+
+.userReplyButton:hover {
+    text-decoration: underline;
+}
+
+.rightFeedContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 312px;
+    margin-top: 0px;
+    flex: 0 0 312px;
+    margin-left: 2em;
+}
+
+.rightFeedUserProfile {
+    position: relative;
+    overflow: hidden;
+}
+
+.userProfileContent {
+    overflow-wrap: break-word;
+    background-color: rgb(26, 26, 27);
+    border-radius: 5px 5px 4px 4px;
+    overflow: visible;
+    padding: 12px;
+}
+
+.userProfileSplash {
+    background-color: rgb(45, 151, 229);
+    height: 94px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.userProfileAvatarContainer {
+    background-color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    height: 86px;
+    margin-left: -3px;
+    margin-top: 16px;
+    padding: 3px;
+    position: relative;
+    width: 86px;
+}
+
+.userProfileAvatar {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    border-radius: 4px;
+}
+
+.profileUserLink {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgb(215, 218, 220);
+    margin-top: 4px;
 }

@@ -24,7 +24,7 @@ const getSingleComment = (req, res, next) => {
 const getUserComments = (req, res, next) => {
     let userId = parseInt(req.params.id);
 
-    db.any('SELECT c.id, c.created_at, c.body, c.post_id, c.comment_id, u.username, c.commented_on, sc.title AS post_title, sc.name AS sub_name FROM comments AS c FULL JOIN users AS u ON c.user_id = u.id FULL JOIN (SELECT p.id, p.title , s.name FROM posts AS p FULL JOIN subvuedits AS s ON p.sub_id = s.id) AS sc ON sc.id = c.post_id WHERE c.user_id=$1', [userId])
+    db.any('SELECT c.id, c.created_at, c.body, c.post_id, c.comment_id, u.username, c.commented_on, sc.title AS post_title, sc.name AS sub_name, sc.sub_id FROM comments AS c FULL JOIN users AS u ON c.user_id = u.id FULL JOIN (SELECT p.id, p.title , s.name, s.id as sub_id FROM posts AS p FULL JOIN subvuedits AS s ON p.sub_id = s.id) AS sc ON sc.id = c.post_id WHERE c.user_id=$1', [userId])
     .then(userComments => {
         res.status(200)
         .json({

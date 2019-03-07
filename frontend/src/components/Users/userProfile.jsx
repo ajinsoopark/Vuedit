@@ -4,6 +4,7 @@ import '../../stylesheets/userProfile.css';
 import UserProfileHeader from './userProfileHeader';
 import UserProfileSortBar from './userProfileSortBar'
 import LeftFeedContainer from './leftFeedContainer';
+import RightFeed from './rightFeed';
 
 class UserProfile extends Component {
 
@@ -15,6 +16,7 @@ class UserProfile extends Component {
     }
 
     render () {
+       const { currentViewingProfile } = this.props.users ? this.props.users : '';
 
         return (
             <div className='userProfileContainerOuter'>
@@ -23,6 +25,7 @@ class UserProfile extends Component {
                     <UserProfileSortBar />
                     <div className='userContentContainer'>
                         <LeftFeedContainer />
+                        <RightFeed currentViewingProfile={currentViewingProfile}/>
                     </div>    
                 </div>
             </div>

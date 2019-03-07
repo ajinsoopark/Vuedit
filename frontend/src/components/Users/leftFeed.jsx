@@ -23,13 +23,15 @@ class LeftFeed extends Component {
     render () {
         const { currentComments } = this.props.comments ? this.props.comments : '';
         const { usersPosts } = this.props.posts ? this.props.posts : '';
+        const { id } = this.props.users.currentViewingProfile ? this.props.users.currentViewingProfile : ''; 
+        
         const postsAndComments = 
             this.alternatePostsComments(currentComments, usersPosts) ? 
             this.alternatePostsComments(currentComments, usersPosts).map((content, i) => {
             if (content.commented_on) {
-                console.log(content)
                 return (<UserComments
                         key={i}
+                        user_id={id}
                         id={content.id}
                         created_at={content.created_at}
                         body={content.body}
@@ -39,8 +41,9 @@ class LeftFeed extends Component {
                         commented_on={content.commented_on}
                         post_title={content.post_title}
                         sub_name={content.sub_name}
+                        sub_id={content.sub_id}
                         />)
-            } else if (content.title) {
+            } else {
                 return (<Post
                         key={i}
                         id={ content.id }
@@ -56,9 +59,7 @@ class LeftFeed extends Component {
                         />)
             }
         }) : ''
-        
-        console.log(this.props)
-        console.log(postsAndComments)
+
         return (
             <div className='leftFeedContainer'>
                 <div className='userSplashContainer'>
