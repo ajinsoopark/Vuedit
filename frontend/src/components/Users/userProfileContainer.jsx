@@ -1,6 +1,8 @@
 import UserProfile from './userProfile';
-import { connect } from 'react-redux'
-import { fetchUser } from '../../actions/users'
+import { connect } from 'react-redux';
+import { fetchUser } from '../../actions/users';
+import { fetchUserPosts } from '../../actions/posts';
+import { fetchUserComments } from '../../actions/comments';
 
 const mapStateToProps = state => {
     return {
@@ -12,7 +14,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchUser: user => dispatch(fetchUser(user))
+        fetchUser: user => dispatch(fetchUser(user)),
+        fetchUserPosts: posts => dispatch(fetchUserPosts(posts)),
+        fetchUserComments: comments => dispatch(fetchUserComments(comments))
     }
 };
 

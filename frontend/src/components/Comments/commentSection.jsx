@@ -28,7 +28,6 @@ const CommentSection = ({ comment }) => {
                             <div className='commentCreatedTime'>
                                 <TimeAgo date={comment.created_at}/>
                             </div>
-                            <div className='commentHeaderSpacing'></div>
                         </div>
                         <div className='commentBodyDiv'>
                             <div className='commentBody'>

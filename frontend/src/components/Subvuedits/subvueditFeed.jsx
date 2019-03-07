@@ -16,7 +16,7 @@ class SubvueditFeed extends Component {
 
     render () {
         const { sub_name } = this.props.posts.subvueditPosts.length ? this.props.posts.subvueditPosts[0] : ''
-
+        console.log(this.props)
         return (
             <div className='subvueditContainerOuter'>
                 <div className='subvueditDivContainer'>

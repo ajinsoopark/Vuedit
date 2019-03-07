@@ -26,3 +26,8 @@ export const fetchSubvueditPosts = (subId) => dispatch => {
     return PostAPIUtil.fetchSubvueditPosts(subId)
     .then(posts => dispatch(subPosts(posts.data.data)));
 }
+
+export const fetchUserPosts = (userId) => dispatch => {
+    return PostAPIUtil.fetchUserPosts(userId)
+    .then(posts => dispatch(usersPosts(posts.data.data)))
+}
