@@ -149,7 +149,7 @@ button {
     position: relative;
     -webkit-box-align: center;
     align-items: center;
-    background-image: url(https://www.redditstatic.com/desktop2x/img/banner/banner-small@2x.png);
+    background-image: url('https://www.redditstatic.com/desktop2x/img/banner/banner-small@2x.png');
     display: flex;
     margin-bottom: 8px;
     background-repeat: no-repeat;
@@ -509,16 +509,17 @@ button {
     border-radius: 5px 5px 4px 4px;
     overflow: visible;
     padding: 12px;
+    height: 30vh;
 }
 
 .userProfileSplash {
-    background-color: rgb(45, 151, 229);
     height: 94px;
     position: absolute;
     left: 0px;
     top: 0px;
     width: 100%;
     border-radius: 4px 4px 0px 0px;
+    background-image: url("https://styles.redditmedia.com/t5_56n7p/styles/profileBanner_zo2pey34k4b21.jpg?width=1280&height=384&crop=1280:384,smart&s=5c76dcca4d3fc008d8666c46a48481d9b6809ca8")
 }
 
 .userProfileAvatarContainer {
@@ -546,5 +547,87 @@ button {
     font-weight: 500;
     line-height: 16px;
     color: rgb(215, 218, 220);
-    margin-top: 4px;
+    margin-top: 4px; 
+    text-decoration: none;
+}
+
+.profileUserLink:hover {
+    text-decoration: underline;
+}
+
+.emailCakeDay {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.userEmail {
+    cursor: default;
+    margin-bottom: 12px;
+    flex: 1 1 50%;
+}
+
+.h5Email {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(215, 218, 220);
+}
+
+.emailAdd {
+    align-items: center;
+    display: flex;
+    margin-top: 2px;
+    padding-top: 0.3em;
+    margin-left: -0.1em;
+}
+
+.emailSVG {
+    width: 14px;
+    height: 14px;
+    fill: rgb(36, 160, 237);
+}
+
+.email {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+    margin-left: 4px;
+}
+
+.userCakeDay {
+    cursor: default;
+    margin-bottom: 12px;
+    flex: 1 1 50%;
+}
+
+.h5CakeDay {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: rgb(215, 218, 220);
+}
+
+.cakeSVG {
+    width: 14px;
+    height: 14px;
+    fill: rgb(36, 160, 237);
+    overflow: hidden;
+}
+
+.cakeDay {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: rgb(129, 131, 132);
+    margin-left: 4px;
+}
+
+.signUpDate {
+    padding-top: 0.3em;
+}
+
+select {
+    cursor: pointer;
 }
