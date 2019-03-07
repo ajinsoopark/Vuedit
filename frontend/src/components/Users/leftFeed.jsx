@@ -1,16 +1,64 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserComments from './userComments';
+import Post from '../Posts/post';
 
 class LeftFeed extends Component {
 
-
-    
+    alternatePostsComments = (arr1, arr2) => {
+        if (arr1 && arr2) {
+         let altArr = [];
+         let  minLength = Math.min(arr1.length, arr2.length);
+  
+          for (let i = 0; i < minLength; i++) {
+              altArr.push(arr1[i], arr2[i]);
+          }
+          
+          altArr.push(...arr1.slice(minLength), ...arr2.slice(minLength));
+          return altArr;
+        }
+     }
 
 
     render () {
-        const {  } = this.props.comments.currentComments;
+        const { currentComments } = this.props.comments ? this.props.comments : '';
+        const { usersPosts } = this.props.posts ? this.props.posts : '';
+        const postsAndComments = 
+            this.alternatePostsComments(currentComments, usersPosts) ? 
+            this.alternatePostsComments(currentComments, usersPosts).map((content, i) => {
+            if (content.commented_on) {
+                console.log(content)
+                return (<UserComments
+                        key={i}
+                        id={content.id}
+                        created_at={content.created_at}
+                        body={content.body}
+                        post_id={content.post_id}
+                        comment_id={content.comment_id}
+                        username={content.username}
+                        commented_on={content.commented_on}
+                        post_title={content.post_title}
+                        sub_name={content.sub_name}
+                        />)
+            } else if (content.title) {
+                return (<Post
+                        key={i}
+                        id={ content.id }
+                        title={ content.title }
+                        body={ content.body }
+                        username={ content.username }
+                        createdTime={ content.created_at }
+                        subvuedit={ content.sub_name }
+                        voteSum={ content.vote_sum }
+                        commentCount={ content.comment_count }
+                        sub_id={ content.sub_id }
+                        user_id={ content.user_id }
+                        />)
+            }
+        }) : ''
+        
         console.log(this.props)
+        console.log(postsAndComments)
         return (
             <div className='leftFeedContainer'>
                 <div className='userSplashContainer'>
@@ -26,7 +74,9 @@ class LeftFeed extends Component {
                     <h1 className='splashH1'>Join the discussion</h1>
                     <Link className='splashSignUpLink' to={ '' }>Get started</Link>
                 </div>
-                <UserComments />
+                <div className='userCommentsPostsFeed'>
+                    {postsAndComments}
+                </div>
             </div>
         )
     }
