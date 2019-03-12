@@ -1,5 +1,5 @@
 import { CURRENT_SUBVUEDIT,
-         SUBVUEDITS,
+         ALL_SUBVUEDITS,
          ADD_SUBVUEDIT } from '../actions/subvuedits';
 
 const initialState = {
@@ -15,15 +15,13 @@ switch (action.type) {
     case ADD_SUBVUEDIT: {
         if (newState.changesMade) {
             newState.subvueditList = [...newState.subvueditList, ...action.payload]
-            newState.changesMade = false
             return newState
         }
         break;
     }
-    case SUBVUEDITS: {
+    case ALL_SUBVUEDITS: {
         if (newState.changesMade) {
             newState.subvueditList = [...action.payload]
-            newState.changesMade = false
             return newState
         }
         break;

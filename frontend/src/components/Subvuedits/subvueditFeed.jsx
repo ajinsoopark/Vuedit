@@ -4,7 +4,7 @@ import '../../stylesheets/subvueditFeed.css';
 import SubvueditHeader from './subvueditHeader';
 import FilterContainer from '../Filter/filterContainer';
 import SubvueditContent from './subvueditContent';
-
+import { withRouter } from 'react-router-dom';
 
 class SubvueditFeed extends Component {
 
@@ -36,4 +36,4 @@ class SubvueditFeed extends Component {
     }
 }
 
-export default SubvueditFeed;
+export default withRouter(SubvueditFeed);

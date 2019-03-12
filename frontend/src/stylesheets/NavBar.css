@@ -84,3 +84,61 @@
 	padding-top: 5px;
 }
 
+.dropDownChoiceDiv {
+	width: 15em;
+	box-sizing: border-box;
+    height: 36px;
+    position: relative;
+}
+
+.sortAndSignUpContainer {
+	align-items: center;
+	display: inline-flex;
+    -webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+	-webkit-box-flex: 0;
+	flex-grow: 0;
+	padding-left: 2em;
+}
+
+.sortMenuContainer {
+	display: flex;
+	margin-right: 8px;
+    padding-right: 8px;
+	border-right: 1px solid rgb(52, 53, 54);
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+}
+
+.navSortLink {
+	fill:#0079D3;
+	height: 24px;
+    line-height: 14px;
+    padding: 8px;
+	width: 24px;
+	margin-left: 1em;
+	margin-right: 1em;
+	border-radius: 4px;
+}
+
+.navSortLink:hover {
+	background-color: #2D2D2E;
+    transition: background-color 0.2s ease 0s;
+}
+
+.navSortSVG {
+	fill:#0079D3;
+	height: 24px;
+    width: 24px;
+}
+
+.loginSignUp {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+    -webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	flex-direction: row;
+}

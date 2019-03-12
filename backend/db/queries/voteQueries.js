@@ -171,7 +171,7 @@ const updateSubvueditVote = (req, res, next) => {
 };
 
 const createVote = (req, res, next) => {
-    db.none('INSERT INTO voting(user_id, content_type, post_id, sub_id, comment_id, vote_type) VALUES (${user_id}, ${content_type}, ${post_id}, ${sub_id}, ${comment_id}, ${vote_type})',
+    db.none('INSERT INTO voting(user_id, content_type, post_id, sub_id, comment_id, vote) VALUES (${user_id}, ${content_type}, ${post_id}, ${sub_id}, ${comment_id}, ${vote})',
             req.body)
         .then(() => {
             res.status(200)

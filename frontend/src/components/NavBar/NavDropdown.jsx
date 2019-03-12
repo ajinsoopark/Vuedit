@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router'
 
 class NavDropdown extends Component {
-    constructor (props) {
-        super (props)
-        this.state = {
-            redditFeed: ['orginal', 'popular', 'all']
-        }
-    }
 
     render () {
+        const subChoices = this.props.subvueditList ? 
+            this.props.subvueditList.map(sub => {
+                return (
+                    <option className='subChoice' value={sub.id}>
+                        { sub.sub_name }
+                    </option>
+                )   
+            }) : '';
+
+        console.log(this.props)
         return (
             <div className='dropDownChoiceDiv'>
-        
+                
             </div>
         )
     }
 }
 
-export default NavDropdown
+export default withRouter(NavDropdown);

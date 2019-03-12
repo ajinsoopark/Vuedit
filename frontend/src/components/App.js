@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 import NavBarContainer from './NavBar/navBarContainer';
 import HomeContainer from './Home/homeContainer';
@@ -17,7 +17,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={ HomeContainer } />
           <Route path='/posts/:id' component={ CurrentPostContainer }/>
-          <Route path='/subvuedits/:id' component={ SubvueditContainer }/>
+          <Route exact path='/subvuedits/:id' component={ SubvueditContainer }/>
           <Route path='/user/:id' component={ UserProfileContainer }/>
         </Switch>
       </React.Fragment>

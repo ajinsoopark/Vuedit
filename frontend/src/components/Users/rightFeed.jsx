@@ -6,6 +6,7 @@ class RightFeed extends Component {
     createCakeDay = (createdTime) => {
         if (createdTime) {
             const joinDate = Date(createdTime);
+            console.log(joinDate);
             const cakeDay = joinDate.slice(4, 11) + ', ' + joinDate.slice(11, 15);
             return cakeDay;
         }

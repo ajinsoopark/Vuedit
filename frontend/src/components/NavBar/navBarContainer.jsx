@@ -1,15 +1,20 @@
-// import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import NavBar from './NavBar';
+import { fetchAllSubvuedits } from '../../actions/subvuedits';
 
-const mapStateToProps = store => ({
+const mapStateToProps = state => {
+    return {
+        subvuedits: state.subvuedit
+    }
+};
 
-});
-
-const mapDispatchToProps = dispatch => ({
-});
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchAllSubvuedits: subs => dispatch(fetchAllSubvuedits(subs))
+    }
+};
 
 export default connect (
-    mapDispatchToProps,
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(NavBar);
